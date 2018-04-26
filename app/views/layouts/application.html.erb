@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Evergreen</title>
+    <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://www.fontify.me/wf/685b24b51db351ff8a25613a79596f5b" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<nav id="menu" class="navbar navbar-default navbar-fixed-top"  >
+    <div class="navContainer"> 
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><%= image_tag "evergreen_logo_smaller.png", :class => "navLogo" %></a>
+          <a class="" href="#menu"></a>
+       
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#menu" class="page-scroll">Home</a></li>
+          <li><a href="#about" class="page-scroll">Specials</a></li>
+          <li><a href="#services" class="page-scroll">News &amp; Events</a></li>
+          <li><a href="#portfolio" class="page-scroll">Visit Us</a></li>
+          <li><a href="https://www.shopevergreenkosher.com/" class="page-scroll">Order Online</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </div>
+  </nav>
+    <%= yield %>
+  </body>
+</html>
+

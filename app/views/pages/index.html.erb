@@ -1,0 +1,134 @@
+<div class="overlay"></div>
+<div class="container homeDiv">
+  <div id="slider">
+    <div class="slide_viewer">
+      <div class="slide_group">
+        <div class="slide homeBGDiv homeBGDiv1"></div>
+        <div class="slide homeBGDiv homeBGDiv2"></div>
+        <div class="slide homeBGDiv homeBGDiv3"></div>
+        <div class="slide homeBGDiv homeBGDiv4"></div>
+        <div class="slide homeBGDiv homeBGDiv5"></div>
+      </div>
+    </div>
+  </div>
+
+  <span class="logoSpan">
+    <%= image_tag("evergreen_logo_small.png", class: "evergreenLogo") %>
+  </span>
+  <%= image_tag("evergreen_title.png", class: "evergreenTitle") %>
+  <h1><span id="shop">shop</span><span id="happy">happy!</span></h1>
+  <%= image_tag("boy.png", class: "boy") %>
+</div>
+
+<div class="aboutDiv">
+    <img src= "" >
+    <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=http://files.constantcontact.com/0774347d301/fce41f18-f119-4647-8959-32e0d5df84f8.pdf?ver=1524063673000" class="pdf">
+    <h1>Welcome to Evergreen Kosher Market!</h1>
+  <div class="aboutTextDiv">
+    <p>Located in Town Square in the heart of Monsey, NY, Evergreen is 30,000 square feet of grocery, butcher, bakery, health food, fish, produce, sushi, full service deli & prepared foods.</p>
+    <p>We're more than our wide aisles, huge product selection & great prices. We're a shopping destination that combines the friendliness of a neighborhood grocery with the value and convenience of a state-of-the-art specialty supermarket.</p>
+    <p>Evergreen is our vision.....but it's your store.</p>
+  </div>
+  <%= image_tag("home_bg.jpg", class: "aboutPic") %>
+</div>
+
+<div class="savingsDiv">
+  <h1>Savings Await You!</h1>
+</div>
+
+<!-- Store Links Section -->
+
+<div class="storeLinksDiv">
+  <div class="storeLinksDivOverlay"></div>
+  <div class="storeLinkDiv">
+    <% Dir.foreach('app/assets/images/store_images') do |item| %>
+    <% if item != ".." && item != "." %>
+    
+    <%= link_to image_tag("store_images/#{item}"), "http://www.google.com/" %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="text-center">
+  <div class="container" id="contactDiv">
+    <!-- <div class="gradientOverlay"></div> -->
+    <div class="col-md-6">
+      <%= image_tag("let_us_help.jpg", class: "helpPic") %>
+    </div>
+    <div class="col-md-6">
+    <h1 class="bringForward">Contact Us</h1>
+    <p class="bringForward">Questions? Comments? We'd love to hear from you!</p>
+      <%= form_tag "/pages/contact_form", :id => "contactForm" do %>
+        <p>
+          <%= text_field_tag :name, "", placeholder: "Name", required: true %>
+          <%= text_field_tag :email, "", placeholder: "Email", required: true  %>
+        </p>
+        <p><%= text_area_tag :message, "", placeholder: "Message", required: true  %></p>
+        <%= submit_tag "Send Message", :class => "btn btn-success" %>
+      <% end %>
+      
+    </div>
+  </div>
+</div>
+</span>
+<div id="map"></div>
+<div id="footer">
+  <div class="container text-center">
+    <div class="col-md-4">
+      <h3>Address</h3>
+      <div class="contact-item">
+        <p>Town Square Mall, 59 NY-59,</p>
+        <p>Monsey, NY 10952</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>Opening Hours</h3>
+      <div class="contact-item">
+        <p>Sun-Thurs: 10:00 AM - 7:30 PM</p>
+        <p>Fri: 10:00 AM - 1:30 PM</p>
+        <p>Closed on Motzei Shabbos</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>Contact Info</h3>
+      <div class="contact-item">
+        <p>Phone: <a href="tel:8455173565">(845) 517-3565</a></p>
+        <p>Email: <a href="email:chopandchillny@gmail.com">chopandchillny@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-center copyrights">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="social">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+      <p class="dkFooter">&copy; 2017 All rights reserved. Website by <a href="http://davidklaver.github.io">DK Design</a></p>
+</div>
+
+
+<script>
+  function initMap() {
+    var store = {lat: 41.1067899, lng: -74.0644022};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: store
+    });
+    var marker = new google.maps.Marker({
+      position: store,
+      map: map
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRldDEOdDHkk3uU7bwN9FvfSPF6g7P7LQ&callback=initMap">
+</script>
+
+
