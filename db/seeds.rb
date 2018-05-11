@@ -1,7 +1,46 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+DonationItem.create!([
+  {name: "Size Milk", price: "3.19", image_url: "Golden Flow MILK.jpg", description: "Golden Flow (1/2 Gallon)"},
+  {name: "Orange Juice", price: "3.49", image_url: "Lakewood ORANGE JUICE.jpg", description: "Lakewood Container"},
+  {name: "Yogurt ", price: "0.79", image_url: "Norman Taste YOGURT S.jpg", description: "Norman's Taste (non fat)"},
+  {name: "Individual Cakes ", price: "5.49", image_url: "Reismans CHOCOLATE DANISH.png", description: "Reisman's Chocolate Danish"},
+  {name: "Danishes", price: "4.99", image_url: "Stern Choc Swirl DANISH.png", description: "Stern's (16 oz) Swirl Chocolate \nIndividually Wrapped (8 CT)"},
+  {name: "Wafers", price: "4.79", image_url: "Haddar 40 PK WAFERS.png", description: "Hadar Individual Pack (40 Wafers)"},
+  {name: "Coffee ", price: "13.99", image_url: "Tasters Choice COFFEE Reg 12.jpg", description: "Taster's Choice (12 oz.)"},
+  {name: "Decaf Coffee", price: "10.99", image_url: "Tasters Choice COFFEE Decaf 7.png", description: "Taster's Choice (7 oz.)"},
+  {name: "Tea", price: "5.79", image_url: "Lipton TEA BAGS.jpg", description: "Lipton 100 Bags (8 oz.)"},
+  {name: "Packs of Splenda", price: "2.39", image_url: "Splenda 100.jpg", description: "100 Pack "},
+  {name: "Sugar Cubes", price: "2.09", image_url: "Sugar Cubes.png", description: "16 Oz."},
+  {name: "Instant Soups", price: "0.99", image_url: "Tradition SOUP Cup.JPG", description: "Tradition"},
+  {name: "Apple Sauce", price: "2.69", image_url: "Liebers APPLE SAUCE 6 Pk.jpg", description: "Lieber's ( 6 Pack of Apple Sauce Cups)"},
+  {name: "Tuna Cans", price: "1.79", image_url: "Dagim Solid White Water TUNA.png", description: "Dagim Solid White in Water (3 oz.)"},
+  {name: "Snacker Crackers", price: "3.59", image_url: "Liebers SNACKERS.jpg", description: "Lieber's"},
+  {name: "Rice Cakes ", price: "3.49", image_url: "Blooms RICE CAKES.jpg", description: "Bloom's Individually Wrapped Thins"},
+  {name: "Candy", price: "2.99", image_url: "ZAZA Candies.jpg", description: "Zaza Chew Candy (12 oz.)"},
+  {name: "Candy", price: "4.89", image_url: "Matlow CRYSTAL MINTS.png", description: "Matlow Crystal Mints"},
+  {name: "Plastic Plates (6\")", price: "2.99", image_url: "Plastico 6 In PLATES.png", description: "Plastico "},
+  {name: "Plastic Plates (9\")", price: "5.99", image_url: "Plastico 9 In PLATES.png", description: "Plastico"},
+  {name: "Plastic Bowls", price: "2.99", image_url: "Plastico 12 Oz BOWLS.png", description: "Plastico (12 oz.)"},
+  {name: "Forks", price: "3.49", image_url: "400 FORKS.png", description: "Kitchen Collection (400 CT)"},
+  {name: "Spoons", price: "3.49", image_url: "400 SPOONS.jpg", description: "Kitchen Collection (400 CT)"},
+  {name: "Knives", price: "3.49", image_url: "400 KNIVES.jpg", description: "Kitchen Collection (400 CT)"},
+  {name: "Plastic Cups ", price: "1.39", image_url: "CUPS 7 Oz.jpg", description: "Plastic House (7 oz.)"},
+  {name: "Hot Cups", price: "4.79", image_url: "Solo HOT CUPS 12 Oz.png", description: "Solo (12 oz.)"},
+  {name: "Grape Juice", price: "1.19", image_url: "Kedem GRAPE JUICE 6 Oz.jpg", description: "Kedem (6 oz.)"},
+  {name: "Water Bottles", price: "9.99", image_url: "Poland WATER 8 Oz.png", description: "Poland Spring (8 oz.) Case"},
+  {name: "Seltzer", price: "7.99", image_url: "Vintage SELTZER Case.jpg", description: "Vintage (12 Liter Case)"},
+  {name: "Cereal", price: "2.99", image_url: "Kemach CRISP RICE.jpg", description: "Kemach Crisp Rice"},
+  {name: "Cereal", price: "2.59", image_url: "Kemach CORN FLAKES.png", description: "Kemach Corn Flakes"},
+  {name: "Cereal", price: "2.99", image_url: "Kemach TOASTED OATS.png", description: "Kemach Toasted Oats"},
+  {name: "Snack Bags ", price: "0.25", image_url: "Liebers POTATO CHIPS.jpg", description: "Leiber's Potato Chips (.8 oz.)"},
+  {name: "Snack Bags ", price: "0.25", image_url: "Liebers PRETZELS.png", description: "Leiber's Pretzels (.8 oz.)"},
+  {name: "Snack Bags ", price: "0.39", image_url: "Sunrise POPCORN.png", description: "Sunrise Popcorn (.8 oz.)"},
+  {name: "Melba Toast Crackers", price: "4.19", image_url: "Melba Toast Crackers", description: "Paskez (7 oz.)"},
+  {name: "Oatmeal Packets", price: "3.09", image_url: "Paskesz MELBA TOAST.jpg", description: "Village Farm Instant Oatmeal (10 Pack)"},
+  {name: "Nuts", price: "4.09", image_url: "Kleins FRUIT NUTS.png", description: "Klein's Fruit and Nuts (51 oz.)"},
+  {name: "Fresh Fruit", price: "6.95", image_url: "FRESH FRUITS.jpg", description: nil},
+  {name: "Fresh Vegetables", price: "5.95", image_url: "FRESH VEGETABLES.jpg", description: nil},
+  {name: "Bodek", price: "4.89", image_url: "Bodek LETTUCE.JPG", description: "Lettuce"}
+])
+Order.create!([
+  {ref_num: nil, email: nil, total: nil}
+])

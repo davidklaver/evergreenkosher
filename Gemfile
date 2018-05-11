@@ -41,7 +41,7 @@ gem 'paperclip', '~> 5.2.1'
 # gem 'paperclip-ffmpeg', '~> 1.2.0'
 
 gem 'bootstrap-sass', '~> 3.3.6'
-
+gem 'seed_dump'
 
 
 group :development, :test do
