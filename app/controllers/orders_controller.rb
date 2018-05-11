@@ -14,10 +14,8 @@ class OrdersController < ApplicationController
         @description << item.quantity.to_s + " " + item.donation_item.name
       end
     end  
-    # @description = ""
-    # @carted_donation_items.each { |item|  }
   
-    @subtotal = 0
+    @total = 0
     @carted_donation_items.each do |carted_donation_item|
       @total += carted_donation_item.price * carted_donation_item.quantity
     end
