@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+:root {
+  --lightgreen: #8ec63f;
+  --darkgreen: #01663c;
+} 
 
 .navbar-brand {
 	padding-top: 0;

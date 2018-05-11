@@ -1,4 +1,19 @@
+.cartLinkDiv {
+	position: fixed;
+	right: 0;
+	z-index: 1000;
+	top: 30vh;
+	background-color: var(--darkgreen);
+	width: 150px;
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 25px 0 0 25px;
+	padding: 10px 5px;
+
+}
+
 .donationItemsContainer {
+	background: green;
 	width: 90vw;
 	margin: 100px 5vw;
 	h1 {
@@ -8,15 +23,25 @@
 	}
 }
 
+.cartLink {
+	color: white !important;
+	font-size: 20px;
+}
+
 .donationItemsList {
+	background: green;
 	margin: 0;
 	padding: 0;
 }
 
 .donationItem {
+	height: 225px;
+	border: 2px solid black;
+	padding: 5px;
+	border-radius: 25px;
 	display: inline-block;
 	color: var(--darkgreen);
-	font-size: 20px;
+	font-size: 18px;
 	width: 100%;
 	margin: 20px 0;
 	line-height: 1.25;
@@ -24,10 +49,11 @@
 
 .donationItemImage {
 	max-width: 200px;
-	max-height: 200px;
+
+	max-height: 90%;
 	background-color: white;
 	float: left;
-	margin-right: 10px;
+	margin: 10px 10px 0 0;
 	border-radius: 15px;
 }
 

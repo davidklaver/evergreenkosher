@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
     @carted_donation_items.each do |carted_donation_item|
       @total += carted_donation_item.price * carted_donation_item.quantity
     end
-    @invoiceNumber = Order.last.id + 100
+    @invoiceNumber = Order.last.id + 238
   end
 
 
@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
       @carted_donation_items << CartedDonationItem.find_by("status = ? and id = ?", "carted", carted_donation_item_id)
     end
 
-    order1 = Order.create(total: params[:xAmount], ref_num: params[:xRefNum], email: params[:xEmail])
+    order1 = Order.create(total: params[:xAmount], ref_num: params[:xRefNum], email: params[:xEmail], token: params[:xToken])
 
     @carted_donation_items.each do |carted_donation_item|
       carted_donation_item.update(status: "purchased", order_id: order1.id)
@@ -40,17 +40,17 @@ class OrdersController < ApplicationController
     session[:cart] = []
 
     # Send email to the purchaser with order details using MailGun:
-    RestClient.post "https://api:#{ENV['MAILGUN_API_KEY']}"\
-  "@api.mailgun.net/v3/mail.chopandchillny.com/messages",
-    :from => "noreply@chopandchillny.com",
-    :to => order1.email,
-    :bcc => "chopandchillny@gmail.com",
-    :subject => "Congrats on your Chop and Chill Order!",
-    :html => "Here's your order info: 
-    <p>Total: $#{order1.total}</p>
-    <p>Reference Number: #{order1.ref_num}</p>
-    <p>For more order details, click <a href='www.chopandchillny.com/orders/#{order1.id}?xRefNum=#{order1.ref_num}'>here</a></p>
-    "
+  #   RestClient.post "https://api:#{ENV['MAILGUN_API_KEY']}"\
+  # "@api.mailgun.net/v3/mail.chopandchillny.com/messages",
+  #   :from => "noreply@chopandchillny.com",
+  #   :to => order1.email,
+  #   :bcc => "chopandchillny@gmail.com",
+  #   :subject => "Congrats on your Chop and Chill Order!",
+  #   :html => "Here's your order info: 
+  #   <p>Total: $#{order1.total}</p>
+  #   <p>Reference Number: #{order1.ref_num}</p>
+  #   <p>For more order details, click <a href='www.chopandchillny.com/orders/#{order1.id}?xRefNum=#{order1.ref_num}'>here</a></p>
+  #   "
     # flash[:success] = "Congrats! Your order has been placed!"
     # render "/orders/#{order1.id}?xRefNum=#{params[:xRefNum]}"
 

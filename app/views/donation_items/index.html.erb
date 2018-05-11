@@ -1,9 +1,16 @@
+
+<div class="cartLinkDiv">
+  <a href="/carted_donation_items" class="cartLink"><span class="fa fa-shopping-cart" aria-hidden="true"></span> Go to your Donation Cart <span class="cartCount"><%= "(#{cart_count})" if cart_count > 0 %></span></a>
+</div>
+
 <div class="donationItemsContainer">
   <h1>Donation Items:</h1>
+  
   <ul class="donationItemsList">
-    <% halves = @donation_items.count/2 %>
+
+    <% halves = @donation_items.count/3 %>
     <% @donation_items.each_slice(halves) do |half| %>
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-md-4">
         <% half.each do |donation_item| %>
           <a href="/donation_items/<%= donation_item.id %>">
             <li class="donationItem">
