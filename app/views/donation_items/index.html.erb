@@ -1,31 +1,22 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Donation Items</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Image url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @donation_items.each do |donation_item| %>
-      <tr>
-        <td><%= donation_item.name %></td>
-        <td><%= donation_item.price %></td>
-        <td><%= donation_item.image_url %></td>
-        <td><%= link_to 'Show', donation_item %></td>
-        <td><%= link_to 'Edit', edit_donation_item_path(donation_item) %></td>
-        <td><%= link_to 'Destroy', donation_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Donation Item', new_donation_item_path %>
+<div class="donationItemsContainer">
+  <h1>Donation Items:</h1>
+  <ul class="donationItemsList">
+    <% halves = @donation_items.count/2 %>
+    <% @donation_items.each_slice(halves) do |half| %>
+      <div class="col-xs-12 col-md-6">
+        <% half.each do |donation_item| %>
+          <a href="/donation_items/<%= donation_item.id %>">
+            <li class="donationItem">
+              <%= image_tag "donation_item_images/#{donation_item.image_url}", :class => "donationItemImage" %>
+              <%= donation_item.name %>
+              </br>
+              <%= donation_item.description %>
+              </br>
+              $<%= donation_item.price %>  
+            </li>
+          </a>
+        <% end %><!-- end half.each -->
+      </div> <!-- end column -->
+    <% end %> <!-- end halves.each -->
+  </ul>
+</div>

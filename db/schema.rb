@@ -10,14 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180424084927) do
+ActiveRecord::Schema.define(version: 20180504123433) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "carted_donation_items", force: :cascade do |t|
+    t.string   "status"
+    t.integer  "quantity"
+    t.integer  "order_id"
+    t.integer  "donation_item_id"
+    t.string   "session_id"
+    t.decimal  "price",            precision: 7, scale: 2
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+  end
 
   create_table "donation_items", force: :cascade do |t|
     t.string   "name"
-    t.decimal  "price",      precision: 7, scale: 2
+    t.decimal  "price",       precision: 7, scale: 2
     t.string   "image_url"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "description"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "ref_num"
+    t.string   "email"
+    t.decimal  "total",      precision: 7, scale: 2
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "date"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "video_file_name"
+    t.string   "video_content_type"
+    t.integer  "video_file_size"
+    t.datetime "video_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

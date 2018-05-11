@@ -1,0 +1,12 @@
+<!-- <h1 class="newOrdersH1">Orders new page</h1> -->
+
+<div class="container newDonationContainer">
+	<h1>You are about to donate:</h1>
+<ul>
+<% @description.each do |item| %>
+		<li><%= item %></li>
+<% end %>
+</ul>
+	<iframe class="fidelityIframe" src='https://secure.cardknox.com/dkdesigndev?<%= "xAmount=#{@total}&xBillLastName=#{params[:xShipLastName]}&xCustom02=#{session[:cart]}&xDescription=#{@description}&xBillStreet=#{params[:xShipStreet]}&xBillZip=#{params[:xShipZip]}&xInvoice=#{@invoiceNumber}" %>'>.</iframe>
+</div>
+

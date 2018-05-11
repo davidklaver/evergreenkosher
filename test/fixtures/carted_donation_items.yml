@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  quantity: 1
+  order_id: 1
+  donation_item_id: 1
+  session_id: MyString
+  price: 
+  price: 
+
+two:
+  status: MyString
+  quantity: 1
+  order_id: 1
+  donation_item_id: 1
+  session_id: MyString
+  price: 
+  price: 

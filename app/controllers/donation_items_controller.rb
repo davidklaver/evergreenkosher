@@ -1,28 +1,20 @@
 class DonationItemsController < ApplicationController
   before_action :set_donation_item, only: [:show, :edit, :update, :destroy]
 
-  # GET /donation_items
-  # GET /donation_items.json
   def index
     @donation_items = DonationItem.all
   end
 
-  # GET /donation_items/1
-  # GET /donation_items/1.json
   def show
   end
 
-  # GET /donation_items/new
   def new
     @donation_item = DonationItem.new
   end
 
-  # GET /donation_items/1/edit
   def edit
   end
 
-  # POST /donation_items
-  # POST /donation_items.json
   def create
     @donation_item = DonationItem.new(donation_item_params)
 
@@ -37,8 +29,6 @@ class DonationItemsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /donation_items/1
-  # PATCH/PUT /donation_items/1.json
   def update
     respond_to do |format|
       if @donation_item.update(donation_item_params)
@@ -51,8 +41,6 @@ class DonationItemsController < ApplicationController
     end
   end
 
-  # DELETE /donation_items/1
-  # DELETE /donation_items/1.json
   def destroy
     @donation_item.destroy
     respond_to do |format|

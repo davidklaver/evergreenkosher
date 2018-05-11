@@ -13,34 +13,42 @@
 
   <body>
   	<nav id="menu" class="navbar navbar-default navbar-fixed-top"  >
-    <div class="navContainer"> 
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"><%= image_tag "evergreen_logo_smaller.png", :class => "navLogo" %></a>
-          <a class="" href="#menu"></a>
-       
-      </div>
+      <div class="navContainer"> 
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><%= image_tag "evergreen_logo_smaller.png", :class => "navLogo" %></a>
+            <a class="" href="#menu"></a>
+        </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#menu" class="page-scroll">Home</a></li>
-          <li><a href="#about" class="page-scroll">Specials</a></li>
-          <li><a href="#services" class="page-scroll">News &amp; Events</a></li>
-          <li><a href="#portfolio" class="page-scroll">Visit Us</a></li>
-          <li><a href="https://www.shopevergreenkosher.com/" class="page-scroll">Order Online</a></li>
-        </ul>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#menu" class="page-scroll">Home</a></li>
+            <li><a href="#about" class="page-scroll">Specials</a></li>
+            <li><a href="#services" class="page-scroll">News &amp; Events</a></li>
+            <li><a href="#portfolio" class="page-scroll">Visit Us</a></li>
+            <li><a href="https://www.shopevergreenkosher.com/" class="page-scroll">Order Online</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse --> 
       </div>
-      <!-- /.navbar-collapse --> 
-    </div>
-  </nav>
+    </nav>
+
+    <% flash.each do |name, message| %>
+      <div class="alert alert-<%= name %> alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= message.html_safe %>
+      </div>
+    <% end %>
+
     <%= yield %>
+
   </body>
 </html>
 

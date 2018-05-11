@@ -1,0 +1,47 @@
+/*// Place all the styles related to the Orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+$green: #009f34;
+$blue: #292d45;
+
+/*.orderForm {
+	width: 258px;
+	margin: auto;
+}
+.orderForm input {
+	border: 1px solid black;
+	font-size: 14px;
+	margin-bottom: 30px;
+	width: 258px;
+}
+*/
+iframe {
+	width: 60%;
+	margin-left: 20%;
+	height: 100vh;
+}
+
+@media(max-width: 768px) {
+	iframe {
+		width: 96%;
+		margin-left: 2%;
+	}
+}
+
+.newDonationContainer {
+	ul 	{
+		text-align: center;
+		list-style: none;
+		font-size: 20px;
+	}
+}
+
+#submit-btn {
+	background-color: $green;
+	color: white !important;
+}
+
+#submit-btn:hover {
+	background-color: $blue;
+}

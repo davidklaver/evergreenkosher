@@ -1,0 +1,25 @@
+<div class="container orderContainer">	
+	<h1>Thank you for your donation!</h1>
+	<p class="subHeading">Here's what you donated:</p>
+	<table class="cartTable orderTable">
+		<tr>
+			<th>Item</th>
+			<th>Qty.</th>
+		</tr>
+		<% @order.carted_donation_item.each do |carted_donation_item| %>
+		<tr>
+			<td class="donation_itemName">
+				<%= carted_donation_item.donation_item.name %>
+			</td>
+			<td><%= carted_donation_item.quantity %></td>
+		</tr>
+	<% end %>
+	</table>
+	<div class="orderInfoDiv">
+		<p>Reference #: <%= @order.ref_num %></p>
+		<p>Total: <%= number_to_currency(@order.total) %></p>
+		<p>An email confirmation has been sent to: <%= @order.email %></p>
+		<p>Purchased on: <%= @order.pretty_time %></p>
+	</div>
+</div>
+

@@ -1,0 +1,112 @@
+/*// Place all the styles related to the CartedDonationItems controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+$green: #009f34;
+$blue: #292d45;
+
+.cartContainer {
+	margin: 100px auto;
+	text-align: center;
+	/*color: white;*/
+
+	h1 {
+		font-size: 36px;
+		margin-bottom: 50px;
+	}
+
+	#removeBtn {
+		font-size: 22px !important;
+	}
+
+@media(min-width: 768px) {
+	h1 {
+		font-size: 36px;
+	}
+}
+
+	.total {
+		font-family: sans-serif;
+		font-size: 36px;
+		margin-bottom: 30px;
+		color: $green;
+	}
+}
+
+.cartTable {
+	width: 90%;
+	margin: 20px 5%;
+	font-size: 16px;
+	/*color: white;*/
+}
+
+.cartedDonationItemName {
+	/*font-family: 'Runaway';*/
+	font-size: 18px;
+	/*color: $green;*/
+	line-height: 1.25;
+
+}
+
+@media(max-width: 767px) {
+	.cartTable form {
+		margin-top: 5px;
+	}
+}
+
+@media(min-width: 768px) {
+	.cartedDonationItemName {
+		font-size: 24px;
+	}
+}
+		
+
+ .cartTable th {
+ 	padding: 4px;
+ }
+
+ .cartTable tr:not(:first-of-type)  {
+	border-top: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	/*padding: 4px;*/
+}
+
+.cartTable td {
+	padding: 15px;
+	font-size: 20px;
+}
+
+.cartTable th {
+	/*font-size: 22px;*/
+  text-align: center;
+}
+
+/*#placeOrderBtn {
+  background-color: $green;
+}*/
+
+
+
+.removeBtn {
+	background-color: #650000;
+	color: white;
+	display: inline !important;
+	padding: 0 4px !important;
+}
+
+@media(min-width: 768px) {
+	.removeBtn {
+		margin-top: 10px;
+		padding: 0 5px;
+	}
+}
+
+.addToCartBtn {
+	margin-top: 20px;
+	background-color: $green;
+	color: white !important;
+	min-width: 180px;
+}
+
+.addToCartBtn:hover {
+	background-color: $blue;
+}

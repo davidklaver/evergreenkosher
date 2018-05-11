@@ -1,3 +1,57 @@
-// Place all the styles related to the DonationItems controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.donationItemsContainer {
+	width: 90vw;
+	margin: 100px 5vw;
+	h1 {
+		text-align: center;
+		font-size: 50px;
+		margin-top: 120px;
+	}
+}
+
+.donationItemsList {
+	margin: 0;
+	padding: 0;
+}
+
+.donationItem {
+	display: inline-block;
+	color: var(--darkgreen);
+	font-size: 20px;
+	width: 100%;
+	margin: 20px 0;
+	line-height: 1.25;
+}
+
+.donationItemImage {
+	max-width: 200px;
+	max-height: 200px;
+	background-color: white;
+	float: left;
+	margin-right: 10px;
+	border-radius: 15px;
+}
+
+@media(max-width: 479px) {
+	.donationItem {
+		width: 100%;
+	}
+}
+
+.large {
+	position: absolute;
+	width: 70vw;
+	left: 10vw;
+	top: -5vh;
+	z-index: 100;
+}
+
+/*_________________Donation Item Show Page_________________*/
+
+#showdonationItemContainer {
+	margin-top: 100px;
+	text-align: center;
+}
+
+.showDonationItemImage {
+	width: 200px;
+}

@@ -1,0 +1,17 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Please upload your post here:
+<%= form_for @post, url: posts_path, html: { multipart: true } do |form| %>
+  <p>Title:<%= form.text_field :title %></p>
+  <p>Upload image here:<%= form.file_field :image %></p>
+  <p>Upload video here: <%= form.file_field :video %></p>
+  <%= form.submit %>
+<% end %>

@@ -41,19 +41,21 @@
 <div class="storeLinksDiv">
   <div class="storeLinksDivOverlay"></div>
   <div class="storeLinkDiv">
-    <% Dir.foreach('app/assets/images/store_images') do |item| %>
-    <% if item != ".." && item != "." %>
-    
-    <%= link_to image_tag("store_images/#{item}"), "http://www.google.com/" %>
-    <% end %>
-    <% end %>
+        <%= link_to image_tag("store_images/blossoms.png"), "http://www.blossomsny.com/", target: :_blank %>
+        <%= link_to image_tag("store_images/fishys.png"), "https://www.facebook.com/profile.php?id=100005070855322&fref=ts", target: :_blank  %>
+        <%= link_to image_tag("store_images/simply_sushi.png"), "http://www.simplysushi.com/", target: :_blank  %>
+        <%= link_to image_tag("store_images/glatt_geshmak.png"), "http://www.glattgeshmak.com/", target: :_blank  %>
+        <%= link_to image_tag("store_images/town_square.png"), "http://www.mosneytownsquare.com/", target: :_blank  %>
+        <%= link_to image_tag("store_images/zishes.png"), "https://www.facebook.com/ZishesHomemadeBakery/", target: :_blank  %>
+        <%= link_to image_tag("store_images/grab_geshmak.png"), "http://www.glattgeshmak.com/", target: :_blank  %>
+        <%= link_to image_tag("store_images/vitality.png"), "#" %>
   </div>
 </div>
 
 <!-- Contact Section -->
 <div class="text-center">
   <div class="container" id="contactDiv">
-    <!-- <div class="gradientOverlay"></div> -->
+    <div class="gradientOverlay"></div>
     <div class="col-md-6">
       <%= image_tag("let_us_help.jpg", class: "helpPic") %>
     </div>
@@ -79,23 +81,30 @@
     <div class="col-md-4">
       <h3>Address</h3>
       <div class="contact-item">
-        <p>Town Square Mall, 59 NY-59,</p>
-        <p>Monsey, NY 10952</p>
+        <p>Town Square Mall, 59 NY-59
+        <br>
+        Monsey, NY 10952</p>
       </div>
     </div>
     <div class="col-md-4">
       <h3>Opening Hours</h3>
       <div class="contact-item">
-        <p>Sun-Thurs: 10:00 AM - 7:30 PM</p>
-        <p>Fri: 10:00 AM - 1:30 PM</p>
-        <p>Closed on Motzei Shabbos</p>
+        <ul>
+          <li>Sunday: 7am - 11:00pm</li>
+          <li>Monday: 6:30am - 11:00pm</li>
+          <li>Tuesday: 6:30am - 11:00pm</li>
+          <li>Wednesday: 6:30am - 12:00am</li>
+          <li>Thursday: 6:30am - 1:00am</li>
+          <li>Friday: 6:30am - 1-1/2 hour before zman</li>
+          <li>Motzei Shabbos: 1-1/2 hour after zman till 1:00am</li>
+        </ul>
       </div>
     </div>
     <div class="col-md-4">
       <h3>Contact Info</h3>
       <div class="contact-item">
-        <p>Phone: <a href="tel:8455173565">(845) 517-3565</a></p>
-        <p>Email: <a href="email:chopandchillny@gmail.com">chopandchillny@gmail.com</a></p>
+        <p>Phone: <a href="tel:8453524400">(845) 352-4400</a></p>
+        <p>Email: <a href="email:orders@evergreenkosher.com">orders@evergreenkosher.com</a></p>
       </div>
     </div>
   </div>
@@ -111,7 +120,7 @@
       </div>
     </div>
   </div>
-      <p class="dkFooter">&copy; 2017 All rights reserved. Website by <a href="http://davidklaver.github.io">DK Design</a></p>
+      <p class="dkFooter">&copy; 2017 All rights reserved. Website by <a href="http://davidklaver.github.io" target="blank">DK Design</a></p>
 </div>
 
 

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ref_num: MyString
+  email: MyString
+  total: 9.99
+
+two:
+  ref_num: MyString
+  email: MyString
+  total: 9.99

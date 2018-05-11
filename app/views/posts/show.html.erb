@@ -1,0 +1,7 @@
+<h1>All posts:</h1>
+<% @posts.each do |post| %>
+	<h2>Title: <%= post.title %></h2>
+	<div><%= image_tag @post.image.url %></div>
+	<div><%= image_tag @post.image.url(:medium) %></div>
+	<div><%= image_tag @post.image.url(:thumb) %></div>
+<% end %>

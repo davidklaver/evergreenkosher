@@ -15,4 +15,7 @@
 //= require bootstrap-sprockets
 //= require nav
 //= require slider
+//= require ifields.min
+//= require ifields_style
+//= require ifields_submit
 //= require_tree .

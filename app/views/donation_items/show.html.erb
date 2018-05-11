@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @donation_item.name %>
-</p>
+<div id="showdonationItemContainer">
+	<h2><%= @donation_item.name %></h2>
+	<p class="donationItemDescription"><%= @donation_item.description %></p>
+	<%= image_tag "donation_item_images/#{@donation_item.image_url}", :class => "showDonationItemImage" %>
+	<h3>$<%= @donation_item.price %></h3>
 
-<p>
-  <strong>Price:</strong>
-  <%= @donation_item.price %>
-</p>
+	<%= form_tag "/carted_donation_items", method: :post do %>
+		<span>
+			<p><%= label_tag :quantity %>
+			<%= text_field_tag :quantity, 1, :class => "quantityField" %></p>	
+		</span>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @donation_item.image_url %>
-</p>
+		<%= hidden_field_tag :donation_item_id, "#{@donation_item.id}" %>
+		<%= submit_tag "Add To Cart", class: "btn addToCartBtn" %>
+	<% end %>
 
-<%= link_to 'Edit', edit_donation_item_path(@donation_item) %> |
-<%= link_to 'Back', donation_items_path %>
+<%= link_to 'Back to all donation items', donation_items_path %>
+
+</div>
