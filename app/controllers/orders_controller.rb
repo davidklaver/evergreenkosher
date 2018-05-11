@@ -19,10 +19,8 @@ class OrdersController < ApplicationController
   
     @subtotal = 0
     @carted_donation_items.each do |carted_donation_item|
-      @subtotal += carted_donation_item.price * carted_donation_item.quantity
+      @total += carted_donation_item.price * carted_donation_item.quantity
     end
-    @tax = @subtotal * 0.0875
-    @total = (@subtotal + @tax).round(2)
     @invoiceNumber = Order.last.id + 100
   end
 
