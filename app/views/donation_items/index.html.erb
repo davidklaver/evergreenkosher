@@ -1,6 +1,6 @@
 
 <div class="cartLinkDiv">
-  <a href="/carted_donation_items" class="cartLink"><span class="fa fa-shopping-cart" aria-hidden="true"></span> Go to your Donation Cart <span class="cartCount"><%= "(#{cart_count})" if cart_count > 0 %></span></a>
+  <a href="/carted_donation_items" class="cartLink"><span class="fa fa-shopping-cart" aria-hidden="true"></span> Donation Cart <span class="cartCount"><%= "(#{cart_count})" if cart_count > 0 %></span></a>
 </div>
 
 <div class="donationItemsContainer">
@@ -8,22 +8,31 @@
   
   <ul class="donationItemsList">
 
-    <% halves = @donation_items.count/3 %>
-    <% @donation_items.each_slice(halves) do |half| %>
-      <div class="col-xs-12 col-md-4">
-        <% half.each do |donation_item| %>
-          <a href="/donation_items/<%= donation_item.id %>">
+   
+      <div class="donationItemsColumn">
+        <% @donation_items.each do |donation_item| %>
+          <!-- <a href="/donation_items/<%= donation_item.id %>"> -->
             <li class="donationItem">
               <%= image_tag "donation_item_images/#{donation_item.image_url}", :class => "donationItemImage" %>
-              <%= donation_item.name %>
-              </br>
-              <%= donation_item.description %>
-              </br>
-              $<%= donation_item.price %>  
+              <div class="donationItemText">
+                <%= donation_item.name %>
+                </br>
+                <%= donation_item.description %>
+                </br>
+                $<%= donation_item.price %>
+              </div>
+              <%= form_tag "/carted_donation_items", method: :post do %>
+                <p>
+                  <%= label_tag :quantity %>
+                  <%= text_field_tag :quantity, 1, :class => "quantityField" %>
+                </p> 
+                <%= hidden_field_tag :donation_item_id, "#{donation_item.id}" %>
+                <%= submit_tag "Add To Donation Cart", class: "btn addToCartBtn" %>
+              <% end %>  
             </li>
-          </a>
+         <!--  </a> -->
         <% end %><!-- end half.each -->
       </div> <!-- end column -->
-    <% end %> <!-- end halves.each -->
+    
   </ul>
 </div>

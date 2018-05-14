@@ -7,6 +7,6 @@
 		<li><%= item %></li>
 <% end %>
 </ul>
-	<iframe class="fidelityIframe" src='https://secure.cardknox.com/dkdesigndev?<%= "xAmount=#{@total}&xBillLastName=#{params[:xShipLastName]}&xCustom02=#{session[:cart]}&xDescription=#{@description}&xBillStreet=#{params[:xShipStreet]}&xBillZip=#{params[:xShipZip]}&xInvoice=#{@invoiceNumber}" %>'>.</iframe>
+	<iframe class="fidelityIframe" src='https://secure.cardknox.com/dkdesigndev?<%= "xAmount=#{@total}&xCustom02=#{session[:cart]}&xCustom03=#{params[:recurring]}&xDescription=#{@description}xInvoice=#{@invoiceNumber}" %>'>.</iframe>
 </div>
 

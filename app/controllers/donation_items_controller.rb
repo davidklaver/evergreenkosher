@@ -1,8 +1,10 @@
 class DonationItemsController < ApplicationController
   before_action :set_donation_item, only: [:show, :edit, :update, :destroy]
+  require 'rufus-scheduler'
+  # require 'date'
 
   def index
-    @donation_items = DonationItem.all
+    @donation_items = DonationItem.all.sort_by { |item| item.id  }
   end
 
   def show

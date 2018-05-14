@@ -18,4 +18,5 @@ Rails.application.routes.draw do
 	post '/posts' => 'posts#create'
 	get '/posts/:id' => 'posts#show'
  	
+ 	get '/recurring_charge' => 'orders#recurring_charge'
 end

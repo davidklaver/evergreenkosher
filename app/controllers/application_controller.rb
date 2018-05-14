@@ -15,7 +15,11 @@ class ApplicationController < ActionController::Base
 
   def cart_count
     carted_donation_items = CartedDonationItem.where("status = ? and session_id = ?", "carted", session.id)
-  	@cart_count = carted_donation_items.count
+  	@cart_count = 0
+    carted_donation_items.each do |item|
+      @cart_count += item.quantity
+    end
+    @cart_count
   end
   helper_method :cart_count
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180511215611) do
+ActiveRecord::Schema.define(version: 20180513231317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,9 +39,10 @@ ActiveRecord::Schema.define(version: 20180511215611) do
     t.string   "ref_num"
     t.string   "email"
     t.decimal  "total",      precision: 7, scale: 2
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
     t.string   "token"
+    t.boolean  "recurring",                          default: false
   end
 
   create_table "posts", force: :cascade do |t|

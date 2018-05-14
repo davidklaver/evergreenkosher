@@ -10,4 +10,6 @@ class DonationItem < ApplicationRecord
 	def total
 		price + tax
 	end
+
+	
 end
