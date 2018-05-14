@@ -1,12 +1,22 @@
 <!-- <h1 class="newOrdersH1">Orders new page</h1> -->
 
 <div class="container newDonationContainer">
-	<h1>You are donating:</h1>
+	<h1>You are making a 
+		<% if params[:recurring] == "true" %>
+			monthly
+		<% else %>
+			one-time
+		<% end %> 
+donation of:</h1>
 <ul>
 <% @description.each do |item| %>
 		<li><%= item %></li>
 <% end %>
 </ul>
+<% if params[:recurring] == "true" %>
+	<h4>NOTE: By confirming below, you are agreeing to have your card charged <% @total %> once a month on Rosh Chodesh (You can cancel this at any time).</h4>
+<% end %>
+
 	<iframe class="fidelityIframe" src='https://secure.cardknox.com/dkdesigndev?<%= "xAmount=#{@total}&xCustom02=#{session[:cart]}&xCustom03=#{params[:recurring]}&xDescription=#{@description}xInvoice=#{@invoiceNumber}" %>'>.</iframe>
 </div>
 

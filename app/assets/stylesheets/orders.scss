@@ -45,3 +45,19 @@ iframe {
 #submit-btn:hover {
 	background-color: $blue;
 }
+
+/*_________Cancellation Form Page__________*/
+
+.cancelFormDiv {
+	text-align: center;
+	input {
+		margin: 5px auto;
+	}
+	.btn-warning {
+		display: block;
+		width: 250px;
+		margin: 20px auto;
+	}
+}
+
+

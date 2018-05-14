@@ -71,7 +71,7 @@ class OrdersController < ApplicationController
     
     scheduler = Rufus::Scheduler.new
     
-    scheduler.every '1d' do
+    scheduler.cron '1 0 * * *' do
       now = Date.today
       jewish_date = Unirest.get("http://www.hebcal.com/converter/?cfg=json&gy=#{now.year}&gm=#{now.month}&gd=#{now.day}&g2h=1").body["hd"]
       if jewish_date == 1
@@ -89,19 +89,26 @@ class OrdersController < ApplicationController
           }
           x = Net::HTTP.post_form(url, params)
         end
-      end
-    end
-    
-
-    
-      
-    
-
-    
-
-    
-
-    
+        render "recurring_charge.html.erb"
+      end #end if
+    end #end scheduler
 
   end
+
+  def cancel_recurring_charge_form
+    
+  end
+
+  def cancel_recurring_charge
+    if params[:email] != params[:email_confirmation]
+      flash[:danger] = "Email confirmation must match"
+      redirect_to '/orders/cancel_recurring_charge_form'
+    else
+      donation = Order.where("email = ? AND recurring = ?", params[:email], true)
+     donation.update(recurring: false)
+     p "Here's donation now:"
+     p donation
+    end
+  end
+
 end
