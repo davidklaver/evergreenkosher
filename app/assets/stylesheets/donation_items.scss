@@ -23,7 +23,11 @@
 
 .donationHeader {
 	height: 650px;
-	background: url("../assets/donationBanner.png") no-repeat center right;
+	/*background: url("../assets/donationBanner.png") no-repeat bottom right;*/
+	/*background: asset-url("<%= asset_path('donationBanner.png') %>");*/
+	background: image-url('donationBanner.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
   background-size: cover;
   img, p {
   	position: relative;
