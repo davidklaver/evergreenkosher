@@ -10,17 +10,19 @@ $blue: #292d45;
 	/*color: white;*/
 
 	h1 {
-		font-size: 36px;
+		font-size: 28px;
 		margin-bottom: 50px;
-	}
-
-	#removeBtn {
-		font-size: 22px !important;
 	}
 
 @media(min-width: 768px) {
 	h1 {
 		font-size: 36px;
+	}
+
+	p {
+		font-size: 18px;
+		width: 60%;
+		margin: 20px auto;
 	}
 }
 
@@ -39,26 +41,6 @@ $blue: #292d45;
 	/*color: white;*/
 }
 
-.cartedDonationItemName {
-	/*font-family: 'Runaway';*/
-	font-size: 18px;
-	/*color: $green;*/
-	line-height: 1.25;
-
-}
-
-@media(max-width: 767px) {
-	.cartTable form {
-		margin-top: 5px;
-	}
-}
-
-@media(min-width: 768px) {
-	.cartedDonationItemName {
-		font-size: 24px;
-	}
-}
-		
 
  .cartTable th {
  	padding: 4px;
@@ -72,12 +54,42 @@ $blue: #292d45;
 
 .cartTable td {
 	padding: 15px;
-	font-size: 20px;
+	text-align: left;
+	font-size: 22px;
 }
 
 .cartTable th {
 	/*font-size: 22px;*/
   text-align: center;
+}
+
+.cartTable .cartedDonationItemName {
+	font-size: 14px;
+	/*color: $green;*/
+}
+
+.cartImage {
+	max-width: 80px;
+	max-height: 80px;
+	margin-right: 20px;
+}
+
+@media(max-width: 767px) {
+	.cartImage {
+		margin: 5px auto 10px auto;
+		display: block;
+	}
+
+}
+
+@media(min-width: 768px) {
+	.cartedDonationItemName {
+		font-size: 18px;
+	}
+}
+		
+#removeBtn {
+	font-size: 22px !important;
 }
 
 /*#placeOrderBtn {
@@ -98,4 +110,17 @@ $blue: #292d45;
 		margin-top: 10px;
 		padding: 0 5px;
 	}
+}
+
+.checkoutBtn {
+	width: 250px;
+	margin: 5px auto;
+	background-color: var(--darkgreen);
+	color: white !important;
+	height: auto;
+	border-radius: 15px;
+}
+
+.checkoutBtn:hover {
+	background-color: var(--lightgreen);
 }

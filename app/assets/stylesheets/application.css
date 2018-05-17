@@ -19,11 +19,11 @@
 } 
 
 .navbar-brand {
-	padding-top: 0;
+	padding-top: 5px;
 }
 
 .navLogo {
-	width: 60px;
+	width: 50px;
 }
 
 @media(max-width: 767px) {

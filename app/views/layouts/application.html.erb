@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://www.fontify.me/wf/685b24b51db351ff8a25613a79596f5b" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -23,18 +24,18 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/"><%= image_tag "evergreen_logo_smaller.png", :class => "navLogo" %></a>
-            <a class="" href="#menu"></a>
+            <a class="" href="/"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="/#menu" class="page-scroll">Home</a></li>
+            <li><a href="/" class="page-scroll">Home</a></li>
             <li><a href="/#about" class="page-scroll">Specials</a></li>
-            <li><a href="/#services" class="page-scroll">News &amp; Events</a></li>
-            <li><a href="/#portfolio" class="page-scroll">Visit Us</a></li>
+            <li><a href="/posts" class="page-scroll">News &amp; Events</a></li>
+            <li><a href="/#contactDiv" class="page-scroll">Contact Us</a></li>
             <li><a href="https://www.shopevergreenkosher.com/" class="page-scroll">Order Online</a></li>
-            <li><a href="/donation_items" class="page-scroll">Donate to Chesed 24</a></li>
+            <li><a href="/donation_items" class="page-scroll chesed247Link">Donate to Chesed 24/7</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse --> 
@@ -49,6 +50,78 @@
     <% end %>
 
     <%= yield %>
+
+    <div id="footer">
+  <div class="container text-center">
+    <div class="col-md-4">
+      <div id="map"></div>
+    </div>
+    <div class="col-md-4">
+      <h3>Opening Hours</h3>
+      <div class="contact-item">
+        <ul>
+          <li>Sunday: 7am - 11:00pm</li>
+          <li>Monday: 6:30am - 11:00pm</li>
+          <li>Tuesday: 6:30am - 11:00pm</li>
+          <li>Wednesday: 6:30am - 12:00am</li>
+          <li>Thursday: 6:30am - 1:00am</li>
+          <li>Friday: 6:30am - 1-1/2 hour before zman</li>
+          <li>Motzei Shabbos: 1-1/2 hour after zman till 1:00am</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>Contact Info</h3>
+      <div class="contact-item">
+        <p>Address:</p>
+      <!-- <div class="contact-item"> -->
+        <p>Town Square Mall, 59 NY-59
+        <br>
+        Monsey, NY 10952</p>
+      <!-- </div> -->
+        <p>Phone: <a href="tel:8453524400">(845) 352-4400</a></p>
+        <p>Email: <a href="email:orders@evergreenkosher.com">orders@evergreenkosher.com</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-center copyrights">
+    <div class="">
+      <div class="social">
+        <ul>
+          <li>
+            <a href="https://visitor.r20.constantcontact.com/manage/optin?v=001lVscjvAdJRA_sOQmDLWI-iJF373Y5-VBXtTke4BwaZcSxke4Qk34_MzHkHDKQtHqfwMFz9OZ6zr0A7txJ-yTZtMZaB9nADh2IBjLpUgnlmQ%3D"><div class="subscribeBtn">Subscribe to our email listing!</div></a>
+          </li>
+          <li>
+            <%= link_to image_tag("app_store.png"), "https://itunes.apple.com/us/app/evergreen-kosher-market/id1159477611?mt=8&ign-mpt=uo%3D4", :class => "appLink", target: :_blank  %>
+          </li>
+          <li>
+            <%= link_to image_tag("google_play.png"), "https://play.google.com/store/apps/details?id=com.selfpoint.evergreen", :class => "appLink", target: :_blank  %>
+          </li>
+          <li><a href="https://www.facebook.com/pages/Evergreen-Kosher-Market/494574977258981"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="http://www.twitter.com/evergreenkoshe1"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/evergreenkosher/"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+      <p class="dkFooter">&copy; 2014-2020 Evergreen Kosher Market. All rights reserved. Website by <a href="http://davidklaver.github.io" target="blank">DK Design</a></p>
+</div>
+
+<script>
+  function initMap() {
+    var store = {lat: 41.1067899, lng: -74.0644022};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: store
+    });
+    var marker = new google.maps.Marker({
+      position: store,
+      map: map
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRldDEOdDHkk3uU7bwN9FvfSPF6g7P7LQ&callback=initMap">
+</script>
 
   </body>
 </html>

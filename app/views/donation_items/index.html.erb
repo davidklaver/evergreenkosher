@@ -1,14 +1,20 @@
+<header class="donationHeader">
+  <div class="headerOverlay"></div>
+  <%= image_tag "Chesed247Logo.png", :class => "chesed247Logo" %>
+  <p>When you're lost and alone in the hospital, Chesed 24/7 is there for you. Whether you need a hot kosher meal, a quick snack, a cup of coffee or a shoulder to lean on, we are there -- 24/7. Partner with us and help us stock our Hospitality Rooms which serve as a "home in the hospital" for patients and their families.</p>
+</header>
 
 <div class="cartLinkDiv">
   <a href="/carted_donation_items" class="cartLink"><span class="fa fa-shopping-cart" aria-hidden="true"></span> Donation Cart <span class="cartCount"><%= "(#{cart_count})" if cart_count > 0 %></span></a>
 </div>
 
 <div class="donationItemsContainer">
-  <h1>Donation Items:</h1>
-  <p><%=link_to "To cancel a monthly donation, click here", "/orders/cancel_recurring_charge_form" %>.</p>
-  <ul class="donationItemsList">
+  <h1>Items Avaliable For Donation:</h1>
+  <p class="cancelFormLink"><%=link_to "To cancel a monthly donation, click here", "/orders/cancel_recurring_charge_form", :class => "" %>.</p>
 
-   
+  
+
+  <ul class="donationItemsList">
       <div class="donationItemsColumn">
         <% @donation_items.each do |donation_item| %>
           <!-- <a href="/donation_items/<%= donation_item.id %>"> -->

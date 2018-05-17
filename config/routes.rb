@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 	post '/orders/cancel_recurring_charge' => 'orders#cancel_recurring_charge'
 	post '/orders' => 'orders#create'
 	get '/orders/:id' => 'orders#show'
+	get '/recurring_charge' => 'orders#recurring_charge'
+
 
 	get '/carted_donation_items' => 'carted_donation_items#index'
 	post '/carted_donation_items' => 'carted_donation_items#create'
@@ -20,5 +22,8 @@ Rails.application.routes.draw do
 	post '/posts' => 'posts#create'
 	get '/posts/:id' => 'posts#show'
  	
- 	get '/recurring_charge' => 'orders#recurring_charge'
+ 	get '/login' => 'sessions#new'
+	post '/login' => 'sessions#create'
+	get '/logout' => 'sessions#destroy'
+
 end

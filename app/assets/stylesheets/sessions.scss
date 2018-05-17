@@ -1,3 +1,69 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.signupContainer {
+	h1 {
+		font-size: 40px;
+		text-align: center;
+		margin: 50px 20px 15px 0;
+	}
+
+	p {
+		color: white;
+		text-align: center;
+		margin-bottom: 30px;
+		font-size: 20px;
+	}
+
+	.formDiv {
+		width: 65%;
+		max-width: 450px;
+		margin: 50px auto;
+	}
+
+	.fieldDiv {
+		text-align: right;
+		font-size: 18px;
+
+		input {
+			width: 250px;
+		}
+	}
+
+@media(min-width: 768px) {
+	.fieldDiv input {
+		margin-right: 100px;
+	}
+}
+
+	.submitBtn {
+		width: 100px;
+		margin: 20px 165px;
+	}
+
+	@media(max-width: 767px) {
+			input {
+				display: block;
+				margin: auto;
+			}
+			.fieldDiv {
+				text-align: center;
+			}
+
+			.submitBtn {
+				margin: 20px auto;
+			}
+		}
+
+	 label {
+		font-size: 18px;
+		font-family: "Chelsea Market";
+		color: var(--darkgreen);
+		text-align: center;
+	}
+
+	input:not(:last-child) {
+		width: 300px;
+	}
+}

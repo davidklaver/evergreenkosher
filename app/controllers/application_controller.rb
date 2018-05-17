@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
    def authenticate_admin!
-    redirect_to '/donation_items' unless current_user && current_user.admin
+    redirect_to '/login' unless current_user && current_user.admin
   end
 
   def cart_count

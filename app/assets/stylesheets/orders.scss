@@ -16,14 +16,14 @@ $blue: #292d45;
 	width: 258px;
 }
 */
-iframe {
+.fidelityIframe {
 	width: 60%;
 	margin-left: 20%;
 	height: 100vh;
 }
 
 @media(max-width: 768px) {
-	iframe {
+	.fidelityIframe {
 		width: 96%;
 		margin-left: 2%;
 	}

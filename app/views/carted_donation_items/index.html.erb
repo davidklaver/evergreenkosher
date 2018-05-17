@@ -9,8 +9,8 @@
 		</tr>
 		<% @carted_donation_items.each do |carted_donation_item| %>
 			<tr>
-				<td>
-					<span class="cartedDonationItemName"><%= carted_donation_item.donation_item.name %> - <%= carted_donation_item.donation_item.description %></span>
+				<td class="cartedDonationItemName">
+					<%= image_tag "donation_item_images/#{carted_donation_item.donation_item.image_url}", :class => "cartImage" %><%= carted_donation_item.donation_item.name %> - <%= carted_donation_item.donation_item.description %>
 				</td>
 				<td>
 					<%= button_to("X", "/carted_donation_items/#{carted_donation_item.id}", method: :delete, :class => "btn removeBtn", :id => "removeBtn") %>
@@ -25,10 +25,10 @@
 		<p> Click to make your one-time donation below. Or, click "Make Monthly Donation" to automatically donate these items every Rosh Chodesh! (You can cancel this at any time)</p>
 
 
-		<%= link_to "Make One-Time Donation", orders_new_path(recurring: false), class: "btn addToCartBtn", id: "placeOrderBtn", method: :get %>
+		<%= link_to "Make One-Time Donation", orders_new_path(recurring: false), class: "btn checkoutBtn", id: "placeOrderBtn", method: :get %>
 
-		<%= link_to "Make Monthly Donation", orders_new_path(recurring: true), class: "btn addToCartBtn", id: "placeOrderBtn", method: :get %>
+		<%= link_to "Make Monthly Donation", orders_new_path(recurring: true), class: "btn checkoutBtn", id: "placeOrderBtn", method: :get %>
 	
 	<!-- <br> -->
-	<%= button_to("Back To All Donation Items", "/donation_items", method: :get, :class => "btn addToCartBtn") %>
+	<%= button_to("Back To All Donation Items", "/donation_items", method: :get, :class => "btn cancelFormLink") %>
 </div>

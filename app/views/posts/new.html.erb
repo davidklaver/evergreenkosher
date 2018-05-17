@@ -1,17 +1,9 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-Please upload your post here:
-<%= form_for @post, url: posts_path, html: { multipart: true } do |form| %>
-  <p>Title:<%= form.text_field :title %></p>
-  <p>Upload image here:<%= form.file_field :image %></p>
-  <p>Upload video here: <%= form.file_field :video %></p>
-  <%= form.submit %>
-<% end %>
+<div class="container postsContainer">
+	<h1>Please upload your post here:</h1>
+	<%= form_for @post, url: posts_path do |form| %>
+	  <p>Title:<%= form.text_field :title %></p>
+	  <p>Upload image here:<%= form.file_field :image %></p>
+	  <p>Upload YouTube Video ID here (NOT the whole link - just the part after v= ):<%= form.text_field :youtube_id %></p>
+	  <%= form.submit %>
+	<% end %>
+</div>
