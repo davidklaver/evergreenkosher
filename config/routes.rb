@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 	post '/orders/cancel_recurring_charge' => 'orders#cancel_recurring_charge'
 	post '/orders' => 'orders#create'
 	get '/orders/:id' => 'orders#show'
-	get '/recurring_charge' => 'orders#recurring_charge'
+	get '/recurring_charges' => 'orders#recurring_charges'
 
 
 	get '/carted_donation_items' => 'carted_donation_items#index'

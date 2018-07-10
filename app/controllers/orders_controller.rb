@@ -67,7 +67,7 @@ class OrdersController < ApplicationController
     redirect_to "/donation_items" unless @order.ref_num == params[:xRefNum]
   end
 
-  def recurring_charge
+  def recurring_charges
     
     scheduler = Rufus::Scheduler.new
     
@@ -75,9 +75,15 @@ class OrdersController < ApplicationController
     scheduler.cron '* * * * *' do
       now = Date.today
       jewish_date = Unirest.get("http://www.hebcal.com/converter/?cfg=json&gy=#{now.year}&gm=#{now.month}&gd=#{now.day}&g2h=1").body["hd"]
-      # if jewish_date == 27
+      if jewish_date == 27
+      p "*" * 50
       p 'This is the Jewish Date: '
       p jewish_date
+      p "*" * 50
+      p "*" * 50
+      p 'This is the time: '
+      p now
+      p "*" * 50
         recurring_donations = Order.where(recurring: true)
         recurring_donations.each do |donation|
           url = URI.parse('https://x1.cardknox.com/gateway')
@@ -92,8 +98,8 @@ class OrdersController < ApplicationController
           }
           x = Net::HTTP.post_form(url, params)
         end
-        render "recurring_charge.html.erb"
-      # end #end if
+        render "recurring_charges.html.erb"
+      end #end if
     end #end scheduler
 
   end
