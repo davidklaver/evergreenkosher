@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   
   resources :donation_items
+  resources :specials
   
   get '/' => 'pages#index'
-  get '/specials' => 'pages#specials'
 
   get '/orders/new' => 'orders#new'
   get 'orders/cancel_recurring_charge_form' => 'orders#cancel_recurring_charge_form'

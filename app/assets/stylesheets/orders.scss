@@ -18,22 +18,32 @@ $blue: #292d45;
 */
 .fidelityIframe {
 	width: 60%;
-	margin-left: 20%;
+	margin: 20px 20%;
 	height: 100vh;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 76px) {
 	.fidelityIframe {
 		width: 100%;
-		margin: 0;
+		margin: 20px 0;
 	}
 }
 
 .newDonationContainer {
+background-color: rgba(255,255,255,.9);
+padding-top: 100px;
+margin-top: 0 !important;
 	ul 	{
 		text-align: center;
 		list-style: none;
 		font-size: 20px;
+	}
+}
+
+@media(min-width: 768px) {
+	h4 {
+		width: 50%;
+		margin-left: 25%;
 	}
 }
 

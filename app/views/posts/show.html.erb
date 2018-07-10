@@ -1,25 +1,28 @@
-<div class="container">
+<div class="container postContainerDiv">
   <div class="row">
+		
     <div class="showPostContainer col-xs-12 col-md-8">
       <!-- <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=http://files.constantcontact.com/0774347d301/fce41f18-f119-4647-8959-32e0d5df84f8.pdf?ver=1524063673000" class="pdf"> -->
       <h2><%= @post.title %></h2>
 			<p><%= @post.pretty_time %></p>
-			<div><%= image_tag @post.image.url %></div>
+			<% if @post.image_file_name != nil %>
+				<div><%= image_tag @post.image.url %></div>
+			<% else %>
+				<div class="youtubeVideoDiv">
+					<iframe src="https://www.youtube.com/embed/<%= @post.youtube_id %>" frameborder="0" allow="autoplay; encrypted-media" class="youtubeVideo" allowfullscreen></iframe>
+				</div>
+			<% end %>
     </div>
-
-
     <div class="col-xs-12 col-md-3 postsContainer">
       <h1>News & Events</h1>
       <% @posts.each do |post| %>
         <div class="postContainer">
+          <a href="/posts/<%= post.id %>">
             <% if post.image_file_name != nil %>
-              <a href="/posts/<%= post.id %>">
                 <div><%= image_tag post.image.url(:thumb), :class => "postImage" %></div>
             <% else %>
-            <a href="https://www.youtube.com/watch?v=<%= post.youtube_id %>" target="blank">
+            <!-- <a href="https://www.youtube.com/watch?v=<%= post.youtube_id %>" target="blank"> -->
               <%= image_tag "https://img.youtube.com/vi/#{post.youtube_id}/2.jpg", :class => "postImage youtubeThumb" %>
-              <!-- <div><%= image_tag post.image.url %></div> -->
-              <!-- <iframe width="500" height="315" src="https://www.youtube.com/embed/<%= post.youtube_id %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
             <% end %>
             <p>
               <%= post.title %>

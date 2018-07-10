@@ -1,0 +1,12 @@
+<header class="specialsHeader">
+	<h1>Specials</h1>
+</header>
+<div class="specialsContainer" id="startingPoint">
+		<h1>This week's Specials:</h1>
+		<p>Good Through <%= @monsey_specials.good_thru %></p>
+	<div class="specialsLinksDiv">
+		<%= link_to "Click Here To Download Monsey Specials", @monsey_specials.link, target: :_blank, :class => "specialsLink specialsLink1" %>
+		<%= link_to "Click Here To Download Produce Specials", @monsey_specials.produce_link, target: :_blank, :class => "specialsLink specialsLink2" %>
+	</div>
+	<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=<%= @monsey_specials.link %>" class="pdf">
+</div>

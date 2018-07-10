@@ -1,23 +1,32 @@
-<div class="container">
+<header class="postsHeader">
+	<h1>Posts</h1>
+</header>
+<div class="container postContainerDiv">
 	<div class="row">
     <div class="col-xs-12 col-md-8 showPostContainer">
-    	<h1>Most Recent Post</h1>
-			<h2><%= @posts.last.title %></h2>
+    	<h1>Most Recent Post:</h1>
+			<!-- <h2><%= @posts.last.title %></h2> -->
 			<p><%= @posts.last.pretty_time %></p>
-			<div><%= image_tag @posts.last.image.url %></div>
+			<% if @posts.last.image_file_name != nil %>
+				<div><%= image_tag @posts.last.image.url %></div>
+			<% else %>
+				<div class="youtubeVideoDiv">
+					<iframe src="https://www.youtube.com/embed/<%= @posts.last.youtube_id %>" frameborder="0" allow="autoplay; encrypted-media" class="youtubeVideo" allowfullscreen></iframe>
+				</div>
+			<% end %>
 		</div>
 		<div class="col-xs-12 col-md-3 postsContainer">
 			<h1>All posts</h1>
 			<% @posts.each do |post| %>
 				<div class="postContainer">
+					<a href="/posts/<%= post.id %>">
 						<% if post.image_file_name != nil %>
-							<a href="/posts/<%= post.id %>">
-								<div><%= image_tag post.image.url(:thumb), :class => "postImage"  %></div>
+							<div><%= image_tag post.image.url(:thumb), :class => "postImage"  %></div>
 						<% else %>
-						<a href="https://www.youtube.com/watch?v=<%= post.youtube_id %>" target="blank">
+						<!-- <a href="https://www.youtube.com/watch?v=<%= post.youtube_id %>" target="blank"> -->
 							<%= image_tag "https://img.youtube.com/vi/#{post.youtube_id}/2.jpg", :class => "postImage youtubeThumb" %>
 							<!-- <div><%= image_tag post.image.url %></div> -->
-							<!-- <iframe width="500" height="315" src="https://www.youtube.com/embed/<%= post.youtube_id %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+							
 						<% end %>
 						<p>
 							<%= post.title %>

@@ -71,10 +71,11 @@ class OrdersController < ApplicationController
     
     scheduler = Rufus::Scheduler.new
     
-    scheduler.cron '1 0 * * *' do
+    # scheduler.cron '1 0 * * *' do
+    scheduler.cron '43 17 * * *' do
       now = Date.today
       jewish_date = Unirest.get("http://www.hebcal.com/converter/?cfg=json&gy=#{now.year}&gm=#{now.month}&gd=#{now.day}&g2h=1").body["hd"]
-      if jewish_date == 1
+      if jewish_date == 27
         recurring_donations = Order.where(recurring: true)
         recurring_donations.each do |donation|
           url = URI.parse('https://x1.cardknox.com/gateway')
@@ -103,11 +104,14 @@ class OrdersController < ApplicationController
     if params[:email] != params[:email_confirmation]
       flash[:danger] = "Email confirmation must match"
       redirect_to '/orders/cancel_recurring_charge_form'
-    else
+    end
+
       donation = Order.where("email = ? AND recurring = ?", params[:email], true)
+    if donation != []
      donation.update(recurring: false)
-     p "Here's donation now:"
-     p donation
+   else
+      flash[:danger] = "No recurring donation was found with that email address. Please try again."
+      redirect_to '/orders/cancel_recurring_charge_form'
     end
   end
 

@@ -2,13 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.postContainerDiv {
+	background-color: rgba(0,0,0,.7);
+	padding-top: 100px;
+	margin-top: 0 !important;
+}
+
+.postsContainer, .showPostContainer {
+	
+	padding-bottom: 50px;
+	h1, h2, p {
+		color: white;
+	}
+	h1 {
+
+		/*font-family: "Coming Soon";*/
+		/*text-decoration: underline;*/
+	}
+}
+
 .postsContainer {
 	width: 400px !important;
-	
 	display: block;
-	p {
-		/*font-size: 16px;*/
-	}
 }
 
 .postImage {
@@ -23,37 +38,40 @@
 }
 
 .postContainer {
-	margin: 10px auto;
+	margin: 15px auto;
 	border: 2px solid gray;
-	box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+	box-shadow: 15px 15px 15px rgba(0,0,0,.9);
 	border-radius: 5px;
 	padding: 10px;
 	height: 150px;
 	/*background-color: var(--lightgreen);*/
-	background-color: rgba(255,255,255,.9);
-
+	background-color: white;
+	transition: .25s;
 	p {
 		margin: 0;
-		color: black;
+		color: var(--darkgreen);
 		font-size: 16px;
 	}
 
 	&:hover {
-		
+		box-shadow: 5px 5px 5px rgba(0,0,0,.9);
 		background-color: var(--darkgreen);
+
 		/*box-shadow: none;*/
-		box-shadow: 15px 15px 15px rgba(0,0,0,.9);
-		transition: .5s;
 		cursor: pointer;
 
 		p {
 			color: white;
 		}
+
+		a {
+			text-decoration: none;
+		}
 	}
+
 }
 
 .showPostContainer {
-	border-right: 1px solid lightgray;
 	p {
 		margin: 15px;
 		text-align: center;
@@ -63,5 +81,29 @@
 
 	img {
 		width: 100%;
+		padding: 10px;
+		border: 1px solid lightgray;
+	}
+}
+
+.youtubeVideoDiv {
+	background-color: white;
+	width: 700px;
+	height: 410px;
+	margin: 50px auto;
+	padding: 20px;
+	border: 1px solid gray;
+}
+
+.youtubeVideo {
+	height: 100%;
+	width: 100%;
+}
+
+@media(max-width: 768px) {
+	.youtubeVideoDiv {
+		padding: 5px;
+		width: 92vw;
+		height: 60vw;
 	}
 }

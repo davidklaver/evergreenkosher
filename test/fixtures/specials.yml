@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  link: MyString
+  produce_link: MyString
+  good_thru: 2018-05-17
+
+two:
+  link: MyString
+  produce_link: MyString
+  good_thru: 2018-05-17

@@ -10,10 +10,7 @@
 
 <div class="donationItemsContainer">
   <h1>Items Avaliable For Donation:</h1>
-  <p class="cancelFormLink"><%=link_to "To cancel a monthly donation, click here", "/orders/cancel_recurring_charge_form", :class => "" %>.</p>
-
-  
-
+  <p class="cancelFormLink"><%=link_to "To cancel a monthly donation, click here.", "/orders/cancel_recurring_charge_form", :class => "" %></p>
   <ul class="donationItemsList">
       <div class="donationItemsColumn">
         <% @donation_items.each do |donation_item| %>

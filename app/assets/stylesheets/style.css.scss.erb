@@ -13,6 +13,39 @@ h1,h2,h3,h4,h5,h6 {
   text-align: center;
 }
 
+.navbar-brand {
+  padding-top: 5px;
+}
+
+.navLogo {
+  width: 50px;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+@media(max-width: 767px) {
+  .navLogo {
+    width: 50px;
+  }
+}
+
+#menu{
+  height: 75px;
+}
+
+#menu ul {
+  margin-top: -45px;
+}
+
+#footer h3 {
+  font-family: 'Runaway';
+  font-size: 36px;
+  color: white;
+}
+
 .container{
   width: 100vw;
   margin-top: 100px;
@@ -33,8 +66,8 @@ h1,h2,h3,h4,h5,h6 {
 
   .page-scroll {
     font-family: font86429;
-    font-weight: bold;
-    font-size: 22px;
+    /*font-weight: bold;*/
+    font-size: 24px;
     color: var(--darkgreen) !important;
     /*text-transform: uppercase;*/
     /*color: white !important;*/
@@ -85,13 +118,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-.homeDiv {
-  width: 100vw;
-  height: 100vh;
+/*.homeDiv {
+  background: url("<%= asset_path('home_bg10.jpg') %>") center center fixed;
   background-size: cover;
+  
   margin: 0;
   padding: 0;
-  /*overflow-y: hidden;*/
 
   h1 {
     position: relative;
@@ -110,73 +142,18 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
-@keyframes slide {
-0% { left: 0%; }
-20% { left: 0%; }
-25% { left: -100%; }
-45% { left: -100%; }
-50% { left: -200%; }
-70% { left: -200%; }
-75% { left: -300%; }
-95% { left: -300%; }
-100% { left: -400%; }
-}
-
-.slider {
-  margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
-}
-
-.slide_viewer {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1000;
-  filter: blur(2px);
-}
-
-.slide_group {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-
-.slide {
-  display: none;
-  height: 100vh;
-  position: absolute;
-  width: 100vw;
-  background-size: cover;
-}
-
-.slide:first-child {
-  display: block;
-}
-
-.homeBGDiv1 {
-  background: url("<%= asset_path('home_bg10.jpg') %>") center center fixed;
-  background-size: cover;
-}
-
-.overlay {
+*/
+/*.overlay {
   position: absolute;
   margin: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255,255,255, .6);
+  background-color: rgba(255,255,255, .7);
 }
-
+*/
 .bringForward {
   position: relative;
   z-index: 1000;
-}
-
-@media(max-width: 479px) {
-  .homeDiv, .homeBGDiv, .overlay, .slider, .slide_group, .slide_viewer {
-    height: 90vh;
-  }
 }
 
 /*@media(min-width: 768px) {
@@ -193,13 +170,84 @@ h1,h2,h3,h4,h5,h6 {
 }
 */
 
-.logoSpan {
-  /*animation-name: enterLeft;*/
-  /*animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-delay: 1s;
-  animation-fill-mode: backwards;*/
+/*__________________________NEW DESIGN SYLES__________________________*/
+
+.homeContainer {
+  height: 450px;
+  /*width: 100vw;*/
+  /*margin-left: 5vw;*/
+}
+
+.sliderBox {
+  /*background: url("<%= asset_path('home_bg10.jpg') %>") no-repeat center center;*/
+  background-size: cover;
+  padding: 0;
+  height: 100%;
+  border: inset 5px solid white;
+}
+
+.carouselContainer {
+  /*position: relative;*/
+  width: 100%;
+  height: 450px !important;
+}
+
+.carousel-inner img {
+  /*position: absolute;*/
+  width: 100%;
+  height: 450px !important;
+
+}
+
+.fa-chevron {
+  margin-top: 200px;
+}
+
+.linksBox {
+  background-color: var(--darkgreen);
+  height: 100%;
+  padding: 0;
+}
+
+.linkBox {
+  width: 100%;
+  height: calc(100%/3);
+  margin: 0;
+  padding: 0;
+}
+
+.linkBox2 {
+  background-color: var(--lightgreen);
+}
+
+.logoBox {
+  /*display: inline-block;*/
   position: absolute;
+
+  z-index: 1000;
+  background-color: rgba(255,255,255,1);
+  /*background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(187,214,203,0) 67%, rgba(1,102,60,0) 92%, rgba(1,102,60,0) 100%);*/
+  height: 60%;
+  width: 30%;
+  margin: -2px 0 0 0;
+  padding: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 50%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 50%, 0 100%);
+}
+
+.evergreenLogo {
+  width: 50%;
+  margin: 5% 0 0 5%;
+}
+
+.evergreenTitle {
+  width: 35%;
+  margin: 1% 32%;
+  /*display: none;*/
+}
+/*
+.logoSpan {
   width: 15vw;
   height: 14vw;
   border-radius: 50%;
@@ -209,7 +257,7 @@ h1,h2,h3,h4,h5,h6 {
     margin-top: 19vh;
   }
 }
-
+*/
 @media(max-width: 767px) {
   .logoSpan {
     margin-left: 28vw;
@@ -227,9 +275,8 @@ h1,h2,h3,h4,h5,h6 {
     } 
   }
 }
-
+/*
 .evergreenTitle {
-  position: absolute;
   z-index: 1000;
   width: 40vw;
   margin-left: 30vw;
@@ -241,14 +288,15 @@ h1,h2,h3,h4,h5,h6 {
     width: 70vw;
     margin-left: 15vw;
   }
-}
+}*/
+
 
 .triangleDiv {
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 28vw 0 0 28vw;
-  border-color: transparent transparent transparent rgba(0,62,40,.7);
+  border-color: transparent transparent transparent rgba(0,62,40,1);
   position: absolute;
   z-index: 500;
   bottom: 0;
@@ -260,7 +308,7 @@ h1,h2,h3,h4,h5,h6 {
 .boy {
   width: 20vw;
   max-width: 280px;
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0;
   left: -1vw;
   z-index: 800;
@@ -304,7 +352,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 .aboutContainer {
-  background: url("<%= asset_path('fruit2.png') %>") no-repeat left bottom, rgba(255,255,255,.7);
+  background: url("<%= asset_path('fruit2.png') %>") no-repeat left bottom, white;
   background-size: contain;
   /*background-color: var(--darkgreen);*/
   margin: 0;
@@ -390,9 +438,10 @@ h1,h2,h3,h4,h5,h6 {
   padding: 5px;
   border: 2px solid #eee;
   border-radius: 25px;
-  box-shadow: 2px 2px 2px black, 5px 5px 5px var(--darkgreen);
+  box-shadow: 10px 10px 10px black, 10px 10px 10px var(--darkgreen);
   position: relative;
   z-index: 1000;
+  transition: .25s;
 }
 
 .storeLinksDivOverlay {
@@ -405,6 +454,14 @@ h1,h2,h3,h4,h5,h6 {
   .storeLinkDiv img {
     width: 40vw;
     /*margin-left: 0;*/
+  }
+}
+
+@media(min-width: 960px) {
+  .storeLinkDiv img:hover {
+    box-shadow: 20px 20px 20px black, 20px 20px 20px var(--darkgreen);
+    width: calc(20vw + 10px);
+    margin: 5px;
   }
 }
 
@@ -541,10 +598,6 @@ h1,h2,h3,h4,h5,h6 {
   color: white !important;
 }
 
-.displayNone {
-  display: none;
-}
-
 #footer {
   padding: 30px 0;
   background-color: var(--darkgreen);
@@ -561,13 +614,6 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration: underline;
     color: white;
   }
-}
-
-.pdf {
-  width: 90vw;
-  max-width: 850px;
-  height: 80vh; 
-  margin: 50px;
 }
 
 .contact-item p, .contact-item a {

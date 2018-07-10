@@ -9,8 +9,10 @@ $(window).bind('scroll', function() {
         if ($(window).scrollTop() > navHeight) {
             $('#menu').addClass('on');
             $('.page-scroll').addClass('whiteText');
+            $('.navLogo').addClass('visible');
         } else {
             $('#menu').removeClass('on');
             $('.page-scroll').removeClass('whiteText');
+            $('.navLogo').removeClass('visible');
         }
     });

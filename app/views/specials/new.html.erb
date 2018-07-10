@@ -1,0 +1,10 @@
+<div class="container newSpecialsContainer">
+	<h1>Please upload your special here:</h1>
+	<%= form_tag "/specials" do %>
+	  <p>Link:<%= text_field_tag :link %></p>
+	  <p>Produce Link:<%= text_field_tag :produce_link %></p>
+	  <p>Good thru:<%= text_field_tag :good_thru %></p>
+	  
+	  <%= submit_tag "Create Special" %>
+	<% end %>
+</div>

@@ -8,7 +8,7 @@
 	text-align: center;
 	border: 2px solid black;
 	border-radius: 25px 0 0 25px;
-	padding: 10px 5px;
+	padding: 7px;
 	visibility: hidden;
 }
 
@@ -61,21 +61,24 @@
 
 @media(max-width: 768px) {
 	.chesed247Logo {
-	width: 80%;
-	margin-left: 10%;
-	& + p {
-		font-size: 18px;
 		width: 80%;
 		margin-left: 10%;
+		& + p {
+			font-size: 18px;
+			width: 80%;
+			margin-left: 10%;
+		}
 	}
-}
+	.headerOverlay {
+		background-color: rgba(255,255,255,.8);
+	}
 }
 
 .donationItemsContainer {
-
-	/*background: green;*/
-	width: 98vw;
-	margin: 50px 1vw;
+	background: white;
+	width: 100vw;
+	margin: -20px 0 0 0;
+	padding-top: 50px;
 	h1 {
 		text-align: center;
 		font-size: 36px;
