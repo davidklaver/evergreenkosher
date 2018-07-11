@@ -98,10 +98,10 @@ class OrdersController < ApplicationController
           }
           x = Net::HTTP.post_form(url, params)
         end
-        render "recurring_charges.html.erb"
+       
       end #end if
     end #end scheduler
-
+    render "recurring_charges.html.erb"
   end
 
   def cancel_recurring_charge_form
