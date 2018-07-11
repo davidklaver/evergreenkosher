@@ -75,7 +75,7 @@ class OrdersController < ApplicationController
     scheduler.cron '* * * * *' do
       now = Date.today
       jewish_date = Unirest.get("http://www.hebcal.com/converter/?cfg=json&gy=#{now.year}&gm=#{now.month}&gd=#{now.day}&g2h=1").body["hd"]
-      if jewish_date == 27
+      if jewish_date == 28
       p "*" * 50
       p 'This is the Jewish Date: '
       p jewish_date
