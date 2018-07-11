@@ -72,7 +72,7 @@ class OrdersController < ApplicationController
     scheduler = Rufus::Scheduler.new
     
     # scheduler.cron '1 0 * * *' do
-    scheduler.cron '* * * * *' do
+    scheduler.cron '*/10 * * * *' do
       now = Date.today
       jewish_date = Unirest.get("http://www.hebcal.com/converter/?cfg=json&gy=#{now.year}&gm=#{now.month}&gd=#{now.day}&g2h=1").body["hd"]
       if jewish_date == 28
