@@ -96,6 +96,9 @@ class OrdersController < ApplicationController
             xSoftwareName: "Evergreen",
             xSoftwareVersion: "1.0"
           }
+          p "*" * 50
+          p "Here's some params: " + params
+          p "*" * 50
           x = Net::HTTP.post_form(url, params)
         end
        
