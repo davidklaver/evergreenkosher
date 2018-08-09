@@ -2,9 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.postsHeader h1 {
+	font-family: 'markdown';
+	color: white;
+	margin: 0;
+	padding-top: 150px;
+	background-color: var(--darkgreen);
+}
 .postContainerDiv {
-	background-color: rgba(0,0,0,.7);
-	padding-top: 100px;
+	background-color: var(--darkgreen);
+	/*padding-top: 150px;*/
 	margin-top: 0 !important;
 }
 
@@ -12,10 +19,11 @@
 	
 	padding-bottom: 50px;
 	h1, h2, p {
+		font-family: 'markdown';
 		color: white;
 	}
 	h1 {
-
+		
 		/*font-family: "Coming Soon";*/
 		/*text-decoration: underline;*/
 	}
@@ -55,7 +63,7 @@
 
 	&:hover {
 		box-shadow: 5px 5px 5px rgba(0,0,0,.9);
-		background-color: var(--darkgreen);
+		background-color: var(--lightgreen);
 
 		/*box-shadow: none;*/
 		cursor: pointer;

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   
   get '/' => 'pages#index'
 
+  get 'orders' => 'orders#index'
   get '/orders/new' => 'orders#new'
   get 'orders/cancel_recurring_charge_form' => 'orders#cancel_recurring_charge_form'
 	post '/orders/cancel_recurring_charge' => 'orders#cancel_recurring_charge'

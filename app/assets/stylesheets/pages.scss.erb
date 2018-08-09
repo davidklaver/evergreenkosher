@@ -1,0 +1,262 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+  font-family:'markdown';
+  src:font-url('markdown.otf');
+} 
+.freeDeliveryBanner {
+	position: relative;
+	z-index: 10000;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	background-color: var(--darkgreen);
+
+	p {
+		padding: 8px;
+		margin: 0;
+		color: #eee;
+		font-size: 18px;
+	}
+
+	span {
+		font-weight: bold;
+	}
+}
+
+.sliderDiv {
+	width: 100vw;
+	height: 90vh;
+	background: url("<%= asset_path('slider_bg1.png') %>");
+	background-position: top center;
+	background-size: cover;
+	color: black;
+
+	h1 {
+		font-family: 'markdown';
+		margin: 0;
+		padding-top: 18%;
+		font-size: 58px;
+	}
+
+	h3 {
+		font-weight: bold;
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.recipeBtn {
+		text-align: center;
+		font-size: 16px;
+		background-color: #313131;
+		padding: 5px;
+		color: white;
+		width: 150px;
+		display: block;
+		margin: 20px auto;
+	}
+}
+
+#myCarousel {
+	height: 90vh;
+}
+
+.carousel-control {
+	
+}
+
+.sliderArrow {
+	margin: 50vh 35vw;
+	color: white;
+	font-size: 20px !important;
+	padding: 4px;
+	background-color: black;
+		border-radius: 50%;
+}
+
+.threeBoxesDiv {
+	margin-top: 0 !important;
+	background: #6cac44;
+	padding-left: 14%;
+}
+
+.box {
+	/*width: 24%;*/
+	height: 250px;
+	margin: 40px 10px;
+	background-color: #e8f8de;
+	/*width: 300px;*/
+}
+
+.box {
+	h4 {
+		text-align: left;
+		font-family: 'markdown';
+		color: var(--darkgreen);
+		font-size: 24px;
+		width: 50%;
+		margin: 20px 20px 5px 20px;
+	}
+	h5 {
+		margin: 0 20px;
+		text-align: left;
+		color: #777;
+		font-family: 'Montserrat';
+		font-size: 16px;
+	}
+}
+
+.waffles {
+	width: 90%;
+	margin: 10px 10%;
+}
+
+.box2 h4 {
+	width: 100%;
+}
+
+.box3 {
+	padding: 0;
+	div	{
+		background-color: var(--darkgreen);
+		margin: 0 1px 0 0;
+		position: absolute;
+		bottom: 0;
+		width: calc(100% - 1px);
+		p {
+			color: #eee;
+			margin: 5px 20px;
+			font-size: 16px;
+			font-family: 'Montserrat';
+			font-weight: bold;
+			width: 45%;
+		}
+	}
+	.phone {
+		height: 100%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+.specialsDiv {
+	height: 450px;
+	padding-bottom: 50px;
+	h2	{
+		margin: 40px auto;
+		font-family: 'markdown';
+		color: var(--darkgreen);
+	}
+
+}
+
+#specialsCarousel {
+	width: 1200px;
+	/*display: flex;
+	align-items: center;
+	justify-content: center;*/
+	margin: auto;
+	padding-left: 100px;
+	.carousel-control {
+		background-image: none;
+	}
+}
+
+.specialItem {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	width: 200px;
+	min-height: 380px;
+	p {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+.saleBubble {
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	margin-left: -4%;
+}
+
+.specialImage {
+	margin-left: 7%;
+	/*width: 50%;*/
+	margin-top: 20px;
+	max-height: 150px;
+	max-width: 100%;
+}
+
+.specialDescription {
+	text-align: center;
+	font-weight: bold;
+	color: #777;
+	font-size: 12px;
+}
+
+.brandAndWeight {
+	text-align: center;
+	color: #aaa;
+	font-size: 10px;
+}
+
+.specialName {
+	font-size: 11px;
+	color: #777;
+	/*width: 90%;
+	margin-left: 30%;*/
+}
+
+.specialRegPrice {
+	align-self: flex-end;
+	color: orange;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+
+.storeLinksDiv {
+	background-color: lightgrey;
+	/*height: 150px;*/
+	display: flex;
+	justify-content: space-around;
+}
+
+.storeLinkDiv img {
+  width: 150px;
+  margin: 10px;
+  padding: 5px;
+  /*border: 2px solid #eee;*/
+  /*border-radius: 25px;*/
+  /*box-shadow: 10px 10px 10px black, 10px 10px 10px var(--darkgreen);*/
+  position: relative;
+  z-index: 1000;
+  transition: .25s;
+}
+
+@media(max-width: 960px) {
+  .storeLinkDiv img {
+    /*width: 40vw;*/
+  }
+}
+
+@media(min-width: 960px) {
+  .storeLinkDiv img:hover {
+    /*box-shadow: 20px 20px 20px black, 20px 20px 20px var(--darkgreen);*/
+    transform: scale(1.1);
+    margin: 5px;
+  }
+}
+
+
+@media(max-width: 479px) {
+  .storeLinkDiv img {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+}

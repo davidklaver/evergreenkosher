@@ -11,9 +11,9 @@
 }
 
 .specialsContainer, .newSpecialsContainer {
-	background-color: rgba(0,0,0,.8);
+	background-color: var(--darkgreen);
 	text-align: center;
-	margin: -40px 0;
+	/*margin: -40px 0;*/
 	padding: 100px 0;
 
 	h1 {

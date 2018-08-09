@@ -5,6 +5,10 @@ class OrdersController < ApplicationController
   require 'net/https'
   require 'open-uri'
 
+  def index
+    @donations = Order.all
+  end
+
   def new
     @carted_donation_items = []
     @description = []
@@ -71,19 +75,15 @@ class OrdersController < ApplicationController
     
     scheduler = Rufus::Scheduler.new
     
-    # scheduler.cron '1 0 * * *' do
-    scheduler.cron '*/10 * * * *' do
+    scheduler.cron '0 0 * * *' do
       now = Date.today
       jewish_date = Unirest.get("http://www.hebcal.com/converter/?cfg=json&gy=#{now.year}&gm=#{now.month}&gd=#{now.day}&g2h=1").body["hd"]
-      if jewish_date == 28
       p "*" * 50
       p 'This is the Jewish Date: '
       p jewish_date
       p "*" * 50
-      p "*" * 50
-      p 'This is the time: '
-      p now
-      p "*" * 50
+      if jewish_date == 1
+      
         recurring_donations = Order.where(recurring: true)
         recurring_donations.each do |donation|
           url = URI.parse('https://x1.cardknox.com/gateway')
@@ -118,7 +118,7 @@ class OrdersController < ApplicationController
       redirect_to '/orders/cancel_recurring_charge_form'
     end
 
-      donation = Order.where("email = ? AND recurring = ?", params[:email], true)
+    donation = Order.where("email = ? AND recurring = ?", params[:email], true)
     if donation != []
      donation.update(recurring: false)
    else
