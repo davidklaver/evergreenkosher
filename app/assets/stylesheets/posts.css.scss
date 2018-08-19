@@ -4,26 +4,25 @@
 
 .postsHeader h1 {
 	font-family: 'markdown';
-	/*color: white;*/
-	color: var(--darkgreen);
+	color: white;
+	/*color: var(--darkgreen);*/
 	margin: 0;
 	padding-top: 150px;
 	/*background-color: var(--darkgreen);*/
 }
 .postContainerDiv {
-	/*background-color: var(--darkgreen);*/
-	background-color: #eee;
+	background-color: var(--lightgreen);
+	/*background-color: #eee;*/
 	padding-top: 100px;
 	margin-top: 0 !important;
 }
 
 .postsContainer, .showPostContainer {
-	
 	padding-bottom: 50px;
 	h1, h2, p {
 		font-family: 'markdown';
-		/*color: white;*/
-		color: var(--darkgreen);
+		color: white;
+		/*color: var(--darkgreen);*/
 	}
 	h1 {
 		
@@ -73,7 +72,7 @@
 
 	&:hover {
 		box-shadow: 5px 5px 5px rgba(0,0,0,.9);
-		background-color: var(--lightgreen);
+		background-color: var(--darkgreen);
 
 		/*box-shadow: none;*/
 		cursor: pointer;

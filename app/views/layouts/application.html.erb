@@ -28,6 +28,13 @@
     </style>
   <% end %>
   <body>
+    <% if @current_page == 'index' %>
+      <a href="https://www.shopevergreenkosher.com/">
+        <div class="freeDeliveryBanner">
+          <p>FREE DELIVERY WITH PURCHASE OVER $50. <span>SHOP NOW &#9656;</span></p>
+        </div>
+      </a>
+    <% end %>
   	<nav id="menu" class="navbar navbar-default navbar-fixed-top navbar-expand-xl"  >
       <div class="navContainer"> 
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -82,63 +89,66 @@
           <li>Thurs: 6:30am - 1am</li>
           <li>Fri: 6:30am - 1&#189; hour before zman</li>
           <li>Motzei Shabbos: 1&#189; hour after zman - 1am</li>
+          <br>
+          <li>
+            Town Square Mall, 59 NY-59
+            <br>
+            Monsey, NY 10952
+          </li>
         </ul>
       </div>
     </div>
     <div class="col-md-3">
-      <ul>
+      <ul class="sitemapList">
         <li>About Us</li>
-        <li>About Us</li>
-        <li>About Us</li>
-        <li>About Us</li>
-        <li>About Us</li>
+        <li><%= link_to "Order Online", "https://www.shopevergreenkosher.com/" %></li>
+        <li>Recipes (Coming soon!)</li>
+        <li><%= link_to "Specials", "/specials" %></li>
+        <li><%= link_to "News & Events", "/posts" %></li>
+        <li><%= link_to "Donate to Chesed 24/7", "/donation_items" %></li>
+        
       </ul>
     </div>
     <div class="col-md-3">
       <ul>
-        <li>About Us</li>
-        <li>About Us</li>
-        <li>About Us</li>
-        <li>About Us</li>
-        <li>About Us</li>
-      </ul>
-    </div>
-    <div class="col-md-3">
-      <h3>Contact Info</h3>
-      <div class="contact-item">
-        <p>Address:</p>
-      <!-- <div class="contact-item"> -->
-        <p>Town Square Mall, 59 NY-59
-        <br>
-        Monsey, NY 10952</p>
-      <!-- </div> -->
-        <p>Phone: <a href="tel:8453524400">(845) 352-4400</a></p>
-        <p>Email: <a href="email:orders@evergreenkosher.com">orders@evergreenkosher.com</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid copyrights">
-    <div class="">
-      <div class="social">
-        <ul>
-          <li>
-            <a href="https://visitor.r20.constantcontact.com/manage/optin?v=001lVscjvAdJRA_sOQmDLWI-iJF373Y5-VBXtTke4BwaZcSxke4Qk34_MzHkHDKQtHqfwMFz9OZ6zr0A7txJ-yTZtMZaB9nADh2IBjLpUgnlmQ%3D"><div class="subscribeBtn">Subscribe to our email listing!</div></a>
-          </li>
-          <li>
+        <li>
             <%= link_to image_tag("app_store.png"), "https://itunes.apple.com/us/app/evergreen-kosher-market/id1159477611?mt=8&ign-mpt=uo%3D4", :class => "appLink", target: :_blank  %>
           </li>
           <li>
             <%= link_to image_tag("google_play.png"), "https://play.google.com/store/apps/details?id=com.selfpoint.evergreen", :class => "appLink", target: :_blank  %>
           </li>
-          <li><a href="https://www.facebook.com/pages/Evergreen-Kosher-Market/494574977258981"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="http://www.twitter.com/evergreenkoshe1"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="https://www.instagram.com/evergreenkosher/"><i class="fa fa-instagram"></i></a></li>
-        </ul>
+      </ul>
+
+    </div>
+    <div class="col-md-3">
+      <h5 class="tel"><a href="tel:8453524400">(845) 352-4400</a></h5>
+      <p>Follow us for Daily Updates</p>
+      <!-- <div class=""> -->
+        
+        <div class="social">
+          <ul>
+            <li><a href="https://www.facebook.com/pages/Evergreen-Kosher-Market/494574977258981"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="http://www.twitter.com/evergreenkoshe1"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/evergreenkosher/"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+          <a href="https://visitor.r20.constantcontact.com/manage/optin?v=001lVscjvAdJRA_sOQmDLWI-iJF373Y5-VBXtTke4BwaZcSxke4Qk34_MzHkHDKQtHqfwMFz9OZ6zr0A7txJ-yTZtMZaB9nADh2IBjLpUgnlmQ%3D">
+            <div class="subscribeBtn">Subscribe to our email listing</div>
+          </a>
+      </div>
+
+    <!-- </div> -->
+       
+        <!-- <p>Email: <a href="email:orders@evergreenkosher.com">orders@evergreenkosher.com</a></p> -->
       </div>
     </div>
+    <div class="container-fluid copyrights">
+    <p class="dkFooter">
+      &copy; 2014-2020 Evergreen Kosher Market. All rights reserved. Website by 
+      <a href="http://davidklaver.github.io" target="blank">DK Design</a>
+    </p>
   </div>
-      <p class="dkFooter">&copy; 2014-2020 Evergreen Kosher Market. All rights reserved. Website by <a href="http://davidklaver.github.io" target="blank">DK Design</a></p>
-</div>
+  </div>
+  
   </body>
 </html>
 
