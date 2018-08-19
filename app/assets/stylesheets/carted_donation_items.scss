@@ -5,20 +5,26 @@ $green: #009f34;
 $blue: #292d45;
 
 .cartContainer {
-	background-color: rgba(255,255,255,.8);
+	background-color: white;
+	/*background-color: var(--lightgreen);*/
 	margin: 0 !important;
 	padding: 100px 0;
 	text-align: center;
-	/*color: white;*/
-
+	color: var(--darkgreen);
+	font-family: 'Montserrat';
 	h1 {
 		font-size: 28px;
 		margin:0 auto 50px auto;
+		font-family: 'markdown';
+	}
+
+	p, th, td {
+		font-family: 'Montserrat';
 	}
 
 @media(min-width: 768px) {
 	h1 {
-		font-size: 36px;
+		font-size: 48px;
 	}
 
 	p {

@@ -1,0 +1,108 @@
+// Place all the styles related to the Specials controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.specialsHeader {
+	margin: 0;
+	width: 100vw;
+	padding: 50px;
+	
+	/*background-color: white;*/
+	/*background-color: var(--ligreen);*/
+}
+
+.specialsContainer, .newSpecialsContainer {
+	background-color: var(--lightgreen);
+	text-align: center;
+	padding: 50px 0;
+
+	h1, p {
+		/*color: var(--darkgreen);*/
+		color: white;
+		font-family: "markdown";
+		/*margin-bottom: 0;*/
+	}
+
+	p {
+		font-size: 22px;
+		margin-top: 5px;
+	}
+}
+
+@media(min-width: 768px) {
+	.specialsHeader {
+		background: url("<%= asset_path('circulars.png') %>") no-repeat bottom left;
+		/*background-color: var(--lightgreen);*/
+		height: 250px;
+		h1 {
+			font-size: 72px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*.specialsLinksDiv {
+	position: absolute;
+	top: 120px;
+	left: 50px;
+}*/
+
+.specialsLinksDiv {
+		/*background: url("<%= asset_path('circulars.png') %>") no-repeat center center;*/
+		/*background-size: contain;*/
+		/*padding: 30px;*/
+		/*position: absolute;*/
+		top: 80px;
+		right: 0;
+	/*float: right;*/
+}
+
+.specialsLink {
+	background-color: var(--darkgreen);
+/*	background: rgb(142,198,63);*/
+   /*background: linear-gradient(180deg, rgba(82,128,63,1) 0%, rgba(102,148,63,1) 23%, rgba(1,132,60,1) 85%, rgba(1,132,60,1) 100%);*/
+    border: 1px solid var(--darkgreen);
+	color: white !important;
+	padding: 15px;
+	margin: 0 20px;
+	font-size: 12px;
+	border-radius: 5px;
+	display: inline-block;
+	/*width: 380px;*/
+}
+
+@media(min-width: 1200px) {
+	.specialsLink {
+		/*position: absolute;*/
+		/*top: 120px;*/
+		/*width: 180px;*/
+		/*height: 180px;*/
+		/*padding: 50px 30px;*/
+		/*border-radius: 50%;*/
+	}
+
+	.specialsLink1 {
+		left: 5vw;
+	}
+	.specialsLink2 {
+		right: 5vw;
+	}
+	.pdf {
+		transform: scale(1.25);
+	}
+}
+
+@media(max-width: 480px) {
+	.specialsLink {
+		/*width: 90vw;*/
+		/*margin-left: 5vw;*/
+	}
+}
+
+
+.pdf {
+  width: 98vw;
+  max-width: 800px;
+  height: 100vh; 
+  margin-top: 150px;
+}

@@ -14,9 +14,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <% if @current_page == 'index' %>
+    <style type="text/css">
+      .navbar {
+        padding: 60px 0 80px 0 !important;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0.8169642857142857) 0%, rgba(0,0,0,0.623686974789916) 33%, rgba(0,0,0,0.43881302521008403) 60%, rgba(0,0,0,0) 100%);
+      }
 
+      .on {
+        padding: 0 !important;
+      }
+    </style>
+  <% end %>
   <body>
-  	<nav id="menu" class="navbar navbar-default navbar-fixed-top"  >
+  	<nav id="menu" class="navbar navbar-default navbar-fixed-top navbar-expand-xl"  >
       <div class="navContainer"> 
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -57,25 +69,41 @@
     <%= yield %>
 
 <div id="footer">
-  <div class="container text-center">
-    <div class="col-md-4">
-      <%= link_to image_tag("store_images/town_square.png"), "http://www.mosneytownsquare.com/", target: :_blank  %>
-    </div>
-    <div class="col-md-4">
-      <h3>Opening Hours</h3>
-      <div class="contact-item">
+  <div class="container">
+    <div class="col-md-3">
+      <%= image_tag "logo_new.png", :class => "navLogo footerLogo" %>
+      <!-- <h3>Opening Hours</h3> -->
+      <div class="hoursDiv">
         <ul>
-          <li>Sunday: 7am - 11:00pm</li>
-          <li>Monday: 6:30am - 11:00pm</li>
-          <li>Tuesday: 6:30am - 11:00pm</li>
-          <li>Wednesday: 6:30am - 12:00am</li>
-          <li>Thursday: 6:30am - 1:00am</li>
-          <li>Friday: 6:30am - 1-1/2 hour before zman</li>
-          <li>Motzei Shabbos: 1-1/2 hour after zman till 1:00am</li>
+          <li>Sun: 7am - 11pm</li>
+          <li>Mon: 6:30am - 11pm</li>
+          <li>Tue: 6:30am - 11pm</li>
+          <li>Wed: 6:30am - 12am</li>
+          <li>Thurs: 6:30am - 1am</li>
+          <li>Fri: 6:30am - 1&#189; hour before zman</li>
+          <li>Motzei Shabbos: 1&#189; hour after zman - 1am</li>
         </ul>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
+      <ul>
+        <li>About Us</li>
+        <li>About Us</li>
+        <li>About Us</li>
+        <li>About Us</li>
+        <li>About Us</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <ul>
+        <li>About Us</li>
+        <li>About Us</li>
+        <li>About Us</li>
+        <li>About Us</li>
+        <li>About Us</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
       <h3>Contact Info</h3>
       <div class="contact-item">
         <p>Address:</p>
@@ -89,7 +117,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid text-center copyrights">
+  <div class="container-fluid copyrights">
     <div class="">
       <div class="social">
         <ul>
@@ -111,23 +139,6 @@
   </div>
       <p class="dkFooter">&copy; 2014-2020 Evergreen Kosher Market. All rights reserved. Website by <a href="http://davidklaver.github.io" target="blank">DK Design</a></p>
 </div>
-
-<!-- <script>
-  function initMap() {
-    var store = {lat: 41.1067899, lng: -74.0644022};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 14,
-      center: store
-    });
-    var marker = new google.maps.Marker({
-      position: store,
-      map: map
-    });
-  }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRldDEOdDHkk3uU7bwN9FvfSPF6g7P7LQ&callback=initMap">
-</script> -->
-
   </body>
 </html>
 

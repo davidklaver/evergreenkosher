@@ -22,7 +22,7 @@ $blue: #292d45;
 	height: 100vh;
 }
 
-@media(max-width: 76px) {
+@media(max-width: 1200px) {
 	.fidelityIframe {
 		width: 100%;
 		margin: 20px 0;
@@ -30,13 +30,25 @@ $blue: #292d45;
 }
 
 .newDonationContainer {
-background-color: rgba(255,255,255,.9);
-padding-top: 100px;
-margin-top: 0 !important;
+	background-color: rgba(255,255,255,.9);
+	padding-top: 100px;
+	margin-top: 0 !important;
+	h1 {
+		color: var(--darkgreen);
+		font-size: 48px;
+		font-family: 'markdown';	
+	}
+
 	ul 	{
 		text-align: center;
 		list-style: none;
-		font-size: 20px;
+		font-size: 24px;
+	}
+}
+
+@media(max-width: 479px) {
+	.newDonationContainer h1 {
+		font-size: 28px;
 	}
 }
 

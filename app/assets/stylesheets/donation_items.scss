@@ -75,40 +75,54 @@
 }
 
 .donationItemsContainer {
-	background: white;
+	/*display: inline-flex;
+	justify-content: space-around;*/
+	/*background: var(--lightgreen);*/
+	background-color: #eee;
 	width: 100vw;
 	margin: -20px 0 0 0;
-	padding-top: 50px;
 	h1 {
 		text-align: center;
-		font-size: 36px;
+		font-size: 48px;
+		color: var(--darkgreen);
+		font-family: 'markdown';
+		padding-top: 50px;
 	}
 }
 
 .cancelFormLink {
 	text-decoration: underline;
 	text-align: center;
+	font-size: 16px;
+	a {
+		color: var(--lightgreen) !important;
+	}
 }
 
 
 
 .donationItemsList {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: stretch;
 	/*background: green;*/
 	margin: 0;
 	padding: 0;
 }
 
 .donationItem {
-	height: 280px;
+	height: 300px;
 	border: 2px solid black;
-	padding: 10px;
-	border-radius: 25px;
+	padding: 20px;
+	/*border-radius: 25px;*/
 	display: inline-block;
 	width: 300px;
-	margin: 20px 1%;
+	margin: 20px 5px;
 	line-height: 1.25;
 	background-color: white;
-	box-shadow: inset 5px 5px 5px rgba(0,0,0,.3), inset -5px -5px 5px rgba(0,0,0,.3);
+	/*box-shadow: inset 5px 5px 5px rgba(0,0,0,.3), inset -5px -5px 5px rgba(0,0,0,.3);*/
+	box-shadow: 5px 5px 5px rgba(0,0,0,.3);
 }
 
 .donationItemImage {
@@ -134,15 +148,16 @@
 }
 
 .addToCartBtn {
-	width: 200px;
-	margin: 0 25%;
+	width: 94%;
+	margin: 0 3%;
 	background-color: var(--darkgreen);
 	color: white !important;
+	/*padding: 10px;*/
 	/*width: 50%;*/
 	height: auto;
 	/*margin-right: 5%;*/
 	/*float: right;*/
-	border-radius: 15px;
+	/*border-radius: 15px;*/
 	/*position: relative;*/
 	/*min-width: 180px;*/
 }

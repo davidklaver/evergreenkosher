@@ -40,7 +40,7 @@ gem 'paperclip', '~> 5.2.1'
 # gem 'paperclip-av-transcoder'
 # gem 'paperclip-ffmpeg', '~> 1.2.0'
 
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass'
 gem 'seed_dump'
 gem 'rufus-scheduler', '~> 3.2'
 gem 'unirest'

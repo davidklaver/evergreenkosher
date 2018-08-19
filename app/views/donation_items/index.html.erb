@@ -9,10 +9,10 @@
 </div>
 
 <div class="donationItemsContainer">
-  <h1>Items Avaliable For Donation:</h1>
+  <h1>Items Available For Donation:</h1>
   <p class="cancelFormLink"><%=link_to "To cancel a monthly donation, click here.", "/orders/cancel_recurring_charge_form", :class => "" %></p>
   <ul class="donationItemsList">
-      <div class="donationItemsColumn">
+      <!-- <div class="donationItemsColumn"> -->
         <% @donation_items.each do |donation_item| %>
           <!-- <a href="/donation_items/<%= donation_item.id %>"> -->
             <li class="donationItem">
@@ -34,8 +34,8 @@
               <% end %>  
             </li>
          <!--  </a> -->
-        <% end %><!-- end half.each -->
-      </div> <!-- end column -->
+        <% end %>
+      </div> end column
     
   </ul>
 </div>

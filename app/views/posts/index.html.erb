@@ -1,11 +1,11 @@
-<header class="postsHeader">
+<!-- <header class="postsHeader">
 	<h1>Posts</h1>
-</header>
+</header> -->
 <div class="container postContainerDiv">
 	<div class="row">
     <div class="col-xs-12 col-md-8 showPostContainer">
-    	<h1>Most Recent Post:</h1>
-			<!-- <h2><%= @posts.last.title %></h2> -->
+    	<!-- <h1>Most Recent Post:</h1> -->
+			<h2><%= @posts.last.title %></h2>
 			<p><%= @posts.last.pretty_time %></p>
 			<% if @posts.last.image_file_name != nil %>
 				<div><%= image_tag @posts.last.image.url %></div>
@@ -16,7 +16,7 @@
 			<% end %>
 		</div>
 		<div class="col-xs-12 col-md-3 postsContainer">
-			<h1>All posts</h1>
+			<h1>News & Events</h1>
 			<% @posts.each do |post| %>
 				<div class="postContainer">
 					<a href="/posts/<%= post.id %>">
