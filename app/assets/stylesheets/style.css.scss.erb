@@ -282,17 +282,6 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
-#contactDiv {
-  height: 600px;
-  /*background: image-url("let_us_help.jpg");
-  background-size: 55% 100%;*/
-  background-color: var(--darkgreen);
-  /*height: 550px;*/
-  margin: 0;
-  padding: 0 0 50px 0;
-
-}
-
 .gradientOverlay {
   width: 100vw;
   height: 600px;
@@ -302,29 +291,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media(max-width: 768px) {
-  #contactDiv {
-    height: auto;
-    background-size: cover;
-    /*background-position: bottom;*/
-  }
 
   .gradientOverlay {
     height: 100%;
     background: rgba(255,255,255,.7);
-  }
-}
-
-.helpPic {
-  width: 500px;
-  /*border-radius: 25px;*/
-  border: 5px solid #4d1e00;
-  margin-top: 50px;
-  padding: 10px;
-}
-
-@media(max-width: 767px) {
-  .helpPic {
-    width: 90vw;
   }
 }
 
@@ -409,7 +379,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #footer {
-  padding: 30px 0;
+  padding: 20px 0;
   background-color: #252525;
   .container {
     margin: 0;
@@ -427,14 +397,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .footerLogo {
-  width: 160px;
+  width: 140px;
   text-align: left;
   margin-left: 66px;
 }
 
 #footer {
   ul {
-    font-size: 14px;
+    font-size: 12px;
     color: #aaa;
     list-style: none;
     text-align: left;
@@ -449,6 +419,11 @@ h1,h2,h3,h4,h5,h6 {
       color: #aaa !important;
     }
   }
+}
+
+#contactDiv p {
+  color: #aaa;
+  text-align: center;
 }
 
 .social {
@@ -479,7 +454,7 @@ h1,h2,h3,h4,h5,h6 {
     border: 1px solid gray;*/
     font-size: 16px;
     text-align: center;
-    color: white;
+    color: #ddd;
     /*width: 300px;*/
     /*display: inline-block;*/
   }
@@ -487,18 +462,22 @@ h1,h2,h3,h4,h5,h6 {
 
 @media(max-width: 480px) {
     .social ul {
-      margin: 0;
-      padding: 0!important;
-      li {
+     /* margin: 0;
+      padding: 0!important;*/
+    /*  li {
         display: block;
-      }
+      }*/
     }
   }
 
 
 .appLink img {
-  width: 100px;
+  width: 150px;
   margin-top: 60px;
+  &:hover {
+    box-shadow: 5px 5px 5px black;
+    transition: .2s;
+  }
 }
 
 .tel {

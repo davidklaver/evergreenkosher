@@ -77,14 +77,15 @@
 .donationItemsContainer {
 	/*display: inline-flex;
 	justify-content: space-around;*/
-	/*background: var(--lightgreen);*/
-	background-color: #eee;
+	background: var(--lightgreen);
+	/*background-color: #eee;*/
 	width: 100vw;
 	margin: -20px 0 0 0;
 	h1 {
 		text-align: center;
 		font-size: 48px;
-		color: var(--darkgreen);
+		/*color: var(--darkgreen);*/
+		color: white;
 		font-family: 'markdown';
 		padding-top: 50px;
 	}
@@ -95,7 +96,8 @@
 	text-align: center;
 	font-size: 16px;
 	a {
-		color: var(--lightgreen) !important;
+		/*color: var(--lightgreen) !important;*/
+		color: white !important;
 	}
 }
 
@@ -103,7 +105,7 @@
 
 .donationItemsList {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	flex-wrap: wrap;
 	align-items: stretch;
 	/*background: green;*/
@@ -112,9 +114,11 @@
 }
 
 .donationItem {
+	font-family: 'Montserrat';
+	font-weight: bold;
 	height: 300px;
 	border: 2px solid black;
-	padding: 20px;
+	padding: 20px 10px;
 	/*border-radius: 25px;*/
 	display: inline-block;
 	width: 300px;
@@ -137,7 +141,8 @@
 .donationItemText {
 	height: 100px;
 	color: var(--darkgreen);
-	font-size: 16px;
+	font-size: 14px;
+	text-align: center;
 }
 
 .quantityField {
@@ -148,16 +153,16 @@
 }
 
 .addToCartBtn {
-	width: 94%;
-	margin: 0 3%;
+	width: 100%;
+	margin: 0;
 	background-color: var(--darkgreen);
 	color: white !important;
-	/*padding: 10px;*/
+	padding: 15px;
 	/*width: 50%;*/
 	height: auto;
 	/*margin-right: 5%;*/
 	/*float: right;*/
-	/*border-radius: 15px;*/
+	border-radius: 3px;
 	/*position: relative;*/
 	/*min-width: 180px;*/
 }
