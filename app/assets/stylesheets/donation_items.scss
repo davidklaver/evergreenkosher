@@ -93,11 +93,25 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 	margin: -20px 0 0 0;
 	h1 {
 		text-align: center;
-		font-size: 48px;
+		font-size: 36px;
 		color: var(--darkgreen);
 		/*color: white;*/
-		font-family: 'markdown';
-		padding-top: 50px;
+		/*font-family: 'markdown';*/
+		font-family: 'Montserrat';
+		font-style: italic;
+		padding: 50px 15vw 0 15vw;
+		a {
+			color: var(--darkgreen);
+			text-decoration: underline;
+		}
+	}
+}
+
+@media(max-width: 479px) {
+	.donationItemsContainer h1 {
+		padding: 20px;
+		text-align: justify;
+		font-size: 24px;
 	}
 }
 
