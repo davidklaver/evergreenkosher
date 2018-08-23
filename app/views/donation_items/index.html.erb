@@ -16,7 +16,9 @@
         <% @donation_items.each do |donation_item| %>
           <!-- <a href="/donation_items/<%= donation_item.id %>"> -->
             <li class="donationItem">
-              <%= image_tag "donation_item_images/#{donation_item.image_url}", :class => "donationItemImage" %>
+              <div class="donationItemImageDiv">
+                <%= image_tag "donation_item_images/#{donation_item.image_url}", :class => "donationItemImage" %>
+              </div>
               <div class="donationItemText">
                 <%= donation_item.name %>
                 </br>
@@ -35,7 +37,7 @@
             </li>
          <!--  </a> -->
         <% end %>
-      </div> end column
+      </div> <!-- end column -->
     
   </ul>
 </div>

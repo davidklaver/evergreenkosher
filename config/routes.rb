@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :donation_items
   resources :specials
   
-  get '/' => 'pages#index'
+  # get '/' => 'pages#index'
+  get '/' => 'donation_items#index'
 
   get 'orders' => 'orders#index'
   get '/orders/new' => 'orders#new'

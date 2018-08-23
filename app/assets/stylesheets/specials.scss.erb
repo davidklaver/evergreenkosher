@@ -68,7 +68,7 @@
     border: 1px solid var(--darkgreen);
 	color: white !important;
 	padding: 15px;
-	margin: 0 20px;
+	margin: 5px 20px;
 	font-size: 12px;
 	border-radius: 5px;
 	display: inline-block;
@@ -96,17 +96,16 @@
 	}
 }
 
-@media(max-width: 480px) {
-	.specialsLink {
-		/*width: 90vw;*/
-		/*margin-left: 5vw;*/
-	}
-}
-
-
 .pdf {
   width: 98vw;
   max-width: 800px;
   height: 100vh; 
   margin: 150px auto;
 }
+
+@media(max-width: 767px) {
+	.pdf {
+		margin: 10px auto;
+	}
+}
+

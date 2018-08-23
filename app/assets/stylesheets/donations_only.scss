@@ -1,0 +1,21 @@
+/*______________Disable access to pages other than donations___________________*/
+
+#menu ul, .navbar-toggle, #footer div {
+  display: none;
+}
+
+.navLogo {
+	width: 180px !important;
+	position: absolute;
+	left: 20px;
+}
+
+.donationsOnlyContactInfo {
+	font-size: 16px;
+	float: right; 
+	margin-right: 20px; 
+	color: #ddd;
+	a {
+		color: var(--lightgreen);
+	}
+}

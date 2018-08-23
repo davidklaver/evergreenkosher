@@ -17,9 +17,9 @@
   <% if @current_page == 'index' %>
     <style type="text/css">
       .navbar {
-        padding: 60px 0 80px 0 !important;
+        padding: 50px 0 100px 0 !important;
         background: rgb(0,0,0);
-        background: linear-gradient(180deg, rgba(0,0,0,0.8169642857142857) 0%, rgba(0,0,0,0.623686974789916) 33%, rgba(0,0,0,0.43881302521008403) 60%, rgba(0,0,0,0) 100%);
+        background: linear-gradient(180deg, rgba(0,0,0,0.8169642857142857) 0%, rgba(0,0,0,0.723686974789916) 33%, rgba(0,0,0,0.48881302521008403) 60%, rgba(0,0,0,0) 100%);
       }
 
       .on {
@@ -48,7 +48,6 @@
           <a class="navbar-brand" href="/"><%= image_tag "logo_new.png", :class => "navLogo" %></a>
             <a class="" href="/"></a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
@@ -76,6 +75,8 @@
     <%= yield %>
 
 <div id="footer">
+  <!-- for donations only page: -->
+        <span class="donationsOnlyContactInfo">For questions, please email us at <a href="mailto: monsey@evergreenkosher.com">monsey@evergreenkosher.com</a></span>
   <div class="container">
     <div class="col-md-3">
       <%= image_tag "logo_new.png", :class => "navLogo footerLogo" %>

@@ -1,33 +1,41 @@
 .cartLinkDiv {
 	position: fixed;
 	right: 0;
-	z-index: 1000;
-	top: 80vh;
+	z-index: 10000;
+	/*top: 80vh;*/
+	top: 10px;
 	background-color: var(--darkgreen);
-	width: 90px;
+	width: 130px;
 	text-align: center;
-	border: 2px solid black;
+	/*border: 2px solid black;*/
 	border-radius: 25px 0 0 25px;
 	padding: 7px;
-	visibility: hidden;
+	/*visibility: hidden;*/
 }
 
 .display {
 	visibility: visible;
 	transition-duration: .5s;
 }
+
+.fa-shopping-cart {
+	float: left;
+	padding-right: 10px;
+	font-size: 36px !important;
+}
+
 .cartLink {
 	color: white !important;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .donationHeader {
-	height: 650px;
+	height: 600px;
 	/*background: url("../assets/donationBanner.png") no-repeat bottom right;*/
 	/*background: asset-url("<%= asset_path('donationBanner.png') %>");*/
 	background: image-url('donationBanner.png');
 	background-repeat: no-repeat;
-	background-position: bottom right;
+	background-position: top right;
   background-size: cover;
   img, p {
   	position: relative;
@@ -38,8 +46,10 @@
 .headerOverlay {
 	position: absolute;
 	width: 100%;
-	height: 650px;
-	background-color: rgba(255,255,255,.5);
+	height: 600px;
+	/*background-color: rgba(255,255,255,.5);*/
+	background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba(255,255,255,0.623686974789916) 33%, rgba(0,0,0,0) 66%, rgba(0,0,0,0) 100%);
 }
 
 .chesed247Logo {
@@ -52,7 +62,7 @@
 		/*margin-left: 10%;*/
 		/*background-color: rgba(0,32,107,.8);*/
 		color: rgb(0,52,127);
-		padding: 20px;
+		/*padding: 20px;*/
 		border-radius: 25px;
 		/*border: 2px solid white;*/
 		text-align: justify;
@@ -77,15 +87,15 @@
 .donationItemsContainer {
 	/*display: inline-flex;
 	justify-content: space-around;*/
-	background: var(--lightgreen);
+	/*background: var(--darkgreen);*/
 	/*background-color: #eee;*/
 	width: 100vw;
 	margin: -20px 0 0 0;
 	h1 {
 		text-align: center;
 		font-size: 48px;
-		/*color: var(--darkgreen);*/
-		color: white;
+		color: var(--darkgreen);
+		/*color: white;*/
 		font-family: 'markdown';
 		padding-top: 50px;
 	}
@@ -96,8 +106,8 @@
 	text-align: center;
 	font-size: 16px;
 	a {
-		/*color: var(--lightgreen) !important;*/
-		color: white !important;
+		color: var(--lightgreen) !important;
+		/*color: white !important;*/
 	}
 }
 
@@ -115,60 +125,87 @@
 
 .donationItem {
 	font-family: 'Montserrat';
-	font-weight: bold;
-	height: 300px;
-	border: 2px solid black;
+	height: 250px;
+	border: 1px solid #ddd;
 	padding: 20px 10px;
-	/*border-radius: 25px;*/
+	border-radius: 5px;
 	display: inline-block;
 	width: 300px;
-	margin: 20px 5px;
+	/*margin: 20px 5px;*/
+	margin: 3px;
 	line-height: 1.25;
 	background-color: white;
 	/*box-shadow: inset 5px 5px 5px rgba(0,0,0,.3), inset -5px -5px 5px rgba(0,0,0,.3);*/
 	box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+	p {
+		margin: 0;
+	}
+	label {
+		display: inline-block;
+	}
+}
+
+/*.donationItem:hover {
+	background-color: #eee;
+	transition: .2s;
+}*/
+
+.donationItemImageDiv {
+	height: 140px;
+	width: 180px;
+	/*display: inline;*/
+	float: left;
+	position: relative;
+	border-radius: 15px;
 }
 
 .donationItemImage {
-	max-width: 150px;
-	max-height: 200px;
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain;
 	background-color: white;
-	float: left;
-	margin: 10px 10px 0 0;
-	border-radius: 15px;
+	mix-blend-mode: multiply;
+	/*float: left;*/
+	/*margin: 10px auto;*/
+	
 }
 
 .donationItemText {
 	height: 100px;
 	color: var(--darkgreen);
 	font-size: 14px;
-	text-align: center;
+	text-align: right;
 }
 
 .quantityField {
-	width: 50px;
-	text-align: center;
+	width: 40px;
+	text-align: right;
 	border-radius: 5px;
 	font-size: 16px;
 }
 
 .addToCartBtn {
 	width: 100%;
-	margin: 0;
-	background-color: var(--darkgreen);
+	/*margin: 10px 0 0 30%;*/
+	margin-top: 30px;
+	background-color: var(--lightgreen);
+	/*background-color: #d81;*/
 	color: white !important;
-	padding: 15px;
+	padding: 10px 0;
 	/*width: 50%;*/
-	height: auto;
+	/*height: auto;*/
 	/*margin-right: 5%;*/
 	/*float: right;*/
-	border-radius: 3px;
+	/*border-radius: 15px;*/
 	/*position: relative;*/
 	/*min-width: 180px;*/
+	align-self: flex-end;
 }
 
 .addToCartBtn:hover {
-	background-color: var(--lightgreen);
+	/*background-color: #d81;*/
+	background-color: var(--darkgreen);
+	/*transition: .2s;*/
 }
 
 @media(max-width: 479px) {
