@@ -30,43 +30,40 @@
 }
 
 .donationHeader {
-	height: 600px;
+	height: 560px;
+	padding-left: 50px;
 	/*background: url("../assets/donationBanner.png") no-repeat bottom right;*/
 	/*background: asset-url("<%= asset_path('donationBanner.png') %>");*/
-	background: image-url('donationBanner.png');
+	/*background: image-url('donationBanner.png');*/
+	background-color: #eee;
+	/*background: rgb(238,238,238);*/
+background: linear-gradient(270deg, rgba(200,200,200,1) 0%, rgba(228,228,228,1) 70%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%);
+	/*border-bottom: 2px solid #eee;*/
+	/*box-shadow: inset -5px -5px 5px #ccc, inset 5px 5px 5px #ccc;*/
+	/*background: image-url('donationBox.png');*/
 	background-repeat: no-repeat;
-	background-position: top right;
-  background-size: cover;
-  img, p {
+	background-position: bottom right;
+  background-size: 40%;
+/*  img, p {
   	position: relative;
   	z-index: 500;
-  }
+  }*/
 }
 
 .headerOverlay {
-	position: absolute;
-	width: 100%;
-	height: 600px;
-	/*background-color: rgba(255,255,255,.5);*/
-	background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba(255,255,255,0.623686974789916) 33%, rgba(0,0,0,0) 66%, rgba(0,0,0,0) 100%);
+	
+	background-color: rgba(255,255,255,.5);
+	/*background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba(255,255,255,0.623686974789916) 33%, rgba(0,0,0,0) 66%, rgba(0,0,0,0) 100%);*/
 }
 
 .chesed247Logo {
-	padding-top: 100px;
-	width: 600px;
-	margin-left: 50px;
-	& + p {
-		font-size: 18px;
-		width: 650px;
-		/*margin-left: 10%;*/
-		/*background-color: rgba(0,32,107,.8);*/
-		color: rgb(0,52,127);
-		/*padding: 20px;*/
-		border-radius: 25px;
-		/*border: 2px solid white;*/
-		text-align: justify;
-	}
+	/*display: none;*/
+	position: relative;
+	z-index: 1000;
+	padding-top: 80px;
+	width: 500px;
+	margin-left: 15%;
 }
 
 @media(max-width: 768px) {
@@ -79,27 +76,70 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 			margin-left: 10%;
 		}
 	}
+	
+}
+
+.donationHeader p {
+	font-size: 18px;
+	position: relative;
+	z-index: 500;
+		width: 50%;
+		margin-left: 7%;
+		/*background-color: rgba(0,32,107,.8);*/
+		color: rgb(0,52,127);
+		/*padding: 20px;*/
+		border-radius: 25px;
+		/*margin-top: 250px;*/
+		/*border: 2px solid white;*/
+		text-align: justify;
+}
+
+@media(max-width: 989px) {
 	.headerOverlay {
-		background-color: rgba(255,255,255,.8);
+		background-color: rgba(255,255,255,.7);
+		position: absolute;
+		z-index: 50;
+		width: 100vw;
+		height: 560px;
+	}
+	.donationHeader {
+		padding-left: 0;
+		p {
+			width: 90%;
+			margin-left: 5%;
+		}
 	}
 }
 
+.donationBox {
+	position: absolute;
+	/*z-index: -100;*/
+	right: 0;
+	top: 145px;
+	transform: scale(1.1);
+	/*border-bottom: 1px solid lightgray;*/
+	/*position: absolute;*/
+
+}
 .donationItemsContainer {
 	/*display: inline-flex;
 	justify-content: space-around;*/
 	/*background: var(--darkgreen);*/
 	/*background-color: #eee;*/
 	width: 100vw;
-	margin: -20px 0 0 0;
+	margin: 0;
+	/*position: relative;
+	z-index: -150;*/
 	h1 {
+		/*background-color: var(--darkgreen);*/
 		text-align: center;
-		font-size: 36px;
+		font-size: 32px;
 		color: var(--darkgreen);
 		/*color: white;*/
 		/*font-family: 'markdown';*/
 		font-family: 'Montserrat';
 		font-style: italic;
-		padding: 50px 15vw 0 15vw;
+		padding: 20px 15vw;
 		a {
 			color: var(--darkgreen);
 			text-decoration: underline;
@@ -117,6 +157,7 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 
 .cancelFormLink {
 	text-decoration: underline;
+	margin-top: -20px;
 	text-align: center;
 	font-size: 16px;
 	a {
@@ -213,7 +254,7 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 	/*border-radius: 15px;*/
 	/*position: relative;*/
 	/*min-width: 180px;*/
-	align-self: flex-end;
+	/*align-self: flex-end;*/
 }
 
 .addToCartBtn:hover {

@@ -6,6 +6,7 @@ background-color: rgba(255,255,255,1);
 /*background: linear-gradient(180deg, rgba(1,102,60,1) 0%, rgba(1,102,60,0.8729866946778712) 54%, rgba(1,102,60,0.5396533613445378) 78%, rgba(0,0,0,0) 100%);*/
 /*background-color: transparent;*/
 height: 70px;
+border-bottom: 2px solid #eee;
 }
 
 .shorter {
@@ -19,6 +20,10 @@ height: 70px;
 #footer {
 	height: 50px;
 }
+/*
+.chesed247Logo {
+	visibility: hidden;
+}*/
 
 .navLogo {
 	width: 12vw !important;
@@ -26,6 +31,7 @@ height: 70px;
 	position: absolute;
 	left: 37vw;
 		top: 8px;
+		/*top: 5vw;*/
 }
 
 .navLogo2 {
