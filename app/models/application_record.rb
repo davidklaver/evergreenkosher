@@ -4,4 +4,8 @@ class ApplicationRecord < ActiveRecord::Base
   def pretty_time
   		created_at.strftime("%b %d, %Y")
 	end
+
+	def detailed_pretty_time
+  		created_at.strftime("%-I:%M%p, %b %d, %Y")
+	end
 end
