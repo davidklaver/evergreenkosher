@@ -1,3 +1,8 @@
+<a href="https://www.shopevergreenkosher.com/">
+	<div class="freeDeliveryBanner">
+		<p>FREE DELIVERY WITH PURCHASE OVER $50. <span>SHOP NOW &#9656;</span></p>
+	</div>
+</a>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -9,7 +14,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item sliderDiv active banner1">
-     <h1>SUMMER IS FINALLY HERE :)</h1>
+      <h1>SUMMER IS FINALLY HERE :)</h1>
       <h3>View our favorite Summer recipes</h3>
       <button class="recipeBtn">view recipes</button>
     </div>
@@ -35,16 +40,11 @@
 </div>
 <div class=" container threeBoxesDiv">
 	<div class="row">
-		<a href="/donation_items">
-			<div class="box box1 ">
-				<div class="triangleDiv"><p>NEW <span>for</span> ELUL</p></div>
-				<h4>DONATE TO CHESED 24/7</h4>
-				<!-- <h5>NEW for ELUL!</h5> -->
-				<div class="c247boxLogoDiv">
-					<%= image_tag "Chesed247Logo.png", :class => "c247boxLogo" %>
-				</div>
-			</div>
-		</a>
+		<div class="box box1 ">
+			<h4>RECIPES</h4>
+			<h5>From your favorite foodies</h5>
+			<%= image_tag "waffles.png", :class => "waffles" %>
+		</div>
 		<a href="/specials">
 			<div class="box box2 ">
 				<h4>EVERGREEN CIRCULARS</h4>
@@ -60,51 +60,50 @@
 		</div>
 	</div>
 </div>
-<a href="https://www.shopevergreenkosher.com/specials">
-	<div class="specialsDiv">
-		<h2>FEATURED SPECIALS</h2>
-		<div id="specialsCarousel" class="carousel slide" data-ride="carousel">
-		  <div class="carousel-inner" id="specials-carousel-inner">
-		  	<% @specials.each_slice(5) do |five_specials| %>
-		  		<div class="item row">
-						<% five_specials.each do |special| %>
-							<span class="specialItem">
-								<%= image_tag "saleBubble2.png", :class => "saleBubble" %>
-								<div class="specialImageDiv">
-									<%= image_tag special[:image_url], :class => "specialImage" %>
-								</div>
-								<p class="specialDescription"><%= special[:description] %></p>
-									<p class="brandAndWeight">
-										<% if special[:brand] %>
-											<span class="specialBrand"><%= special[:brand] %></span> | 
-											<span class="specialWeight"><%= special[:weight] %> <%= special[:weight_unit] %></span>
-										<% end %>
-									</p>
-								<p class="specialName"><%= special[:name] %></p>
-								<p class="specialPrice"><span class="specialRegPrice" 
-									<% if special[:sale_price] != nil %>
-										style="text-decoration: line-through; color: #aaa;"
-									<% end %>
-								>
-								<%= number_to_currency(special[:regular_price]) %></span> <span class="specialSalePrice"><%= number_to_currency(special[:sale_price]) %></span></p>
-							</span>
-						<% end %>
-					</div>
-				<% end %>
-		  </div>
 
-		  <!-- Left and right controls -->
-		  <a class="left carousel-control" href="#specialsCarousel" data-slide="prev">
-		    <span class="sliderArrow glyphicon glyphicon-chevron-left"></span>
-		    <span class="sr-only">Previous</span>
-		  </a>
-		  <a class="right carousel-control" href="#specialsCarousel" data-slide="next">
-		    <span class="sliderArrow glyphicon glyphicon-chevron-right"></span>
-		    <span class="sr-only">Next</span>
-		  </a>
-		</div>
+<div class="specialsDiv">
+	<h2>FEATURED SPECIALS</h2>
+	<div id="specialsCarousel" class="carousel slide" data-ride="carousel">
+	  <div class="carousel-inner" id="specials-carousel-inner">
+	  	<% @specials.each_slice(5) do |five_specials| %>
+	  		<div class="item row">
+					<% five_specials.each do |special| %>
+						<span class="specialItem">
+							<%= image_tag "saleBubble2.png", :class => "saleBubble" %>
+							<div class="specialImageDiv">
+								<%= image_tag special[:image_url], :class => "specialImage" %>
+							</div>
+							<p class="specialDescription"><%= special[:description] %></p>
+								<p class="brandAndWeight">
+									<% if special[:brand] %>
+										<span class="specialBrand"><%= special[:brand] %></span> | 
+										<span class="specialWeight"><%= special[:weight] %> <%= special[:weight_unit] %></span>
+									<% end %>
+								</p>
+							<p class="specialName"><%= special[:name] %></p>
+							<p class="specialPrice"><span class="specialRegPrice" 
+								<% if special[:sale_price] != nil %>
+									style="text-decoration: line-through; color: #aaa;"
+								<% end %>
+							>
+							<%= number_to_currency(special[:regular_price]) %></span> <span class="specialSalePrice"><%= number_to_currency(special[:sale_price]) %></span></p>
+						</span>
+					<% end %>
+				</div>
+			<% end %>
+	  </div>
+
+	  <!-- Left and right controls -->
+	  <a class="left carousel-control" href="#specialsCarousel" data-slide="prev">
+	    <span class="sliderArrow glyphicon glyphicon-chevron-left"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#specialsCarousel" data-slide="next">
+	    <span class="sliderArrow glyphicon glyphicon-chevron-right"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
 	</div>
-</a>
+</div>
 <div class="storeLinksDiv">
   <!-- <div class="storeLinksDivOverlay"></div> -->
   <div class="storeLinkDiv">

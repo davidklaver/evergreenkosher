@@ -1,10 +1,7 @@
 /*______________Disable access to pages other than donations___________________*/
 
-#menu {
-/*background: rgb(1,102,60);*/
+ #menu {
 background-color: rgba(255,255,255,1);
-/*background: linear-gradient(180deg, rgba(1,102,60,1) 0%, rgba(1,102,60,0.8729866946778712) 54%, rgba(1,102,60,0.5396533613445378) 78%, rgba(0,0,0,0) 100%);*/
-/*background-color: transparent;*/
 height: 70px;
 border-bottom: 2px solid #eee;
 }
@@ -20,25 +17,20 @@ border-bottom: 2px solid #eee;
 #footer {
 	height: 50px;
 }
-/*
-.chesed247Logo {
-	visibility: hidden;
-}*/
 
 .navLogo {
 	width: 12vw !important;
 	min-width: 150px;
 	position: absolute;
 	left: 37vw;
-		top: 8px;
-		/*top: 5vw;*/
+	top: 8px;
 }
 
 .navLogo2 {
+	/*display: none !important;*/
 	position: absolute;
 	left: 51vw;
 	width: 15vw !important;
-
 	top: 25px;
 }
 
@@ -61,10 +53,10 @@ border-bottom: 2px solid #eee;
 	.cartLinkDiv {
 		top: 85vh;
 	}
-
 }
 
 .donationsOnlyContactInfo {
+	/*display: none;*/
 	font-size: 16px;
 	float: right; 
 	text-align: center;

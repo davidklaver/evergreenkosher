@@ -36,11 +36,11 @@
 
 .sliderDiv {
 	width: 100vw;
-	/*height: 90vh;*/
-	height: auto;
+	height: 80vh;
+	/*height: auto;*/
 	color: black;
 
-	/*h1 {
+	h1 {
 		font-family: 'markdown';
 		margin: 0;
 		padding-top: 18%;
@@ -61,16 +61,13 @@
 		width: 150px;
 		display: block;
 		margin: 20px auto;
-	}*/
+	}
 }
 
-.banner1, .banner2, .banner3 {
-	background-position: top center;
-	background-size: cover;
-}
+
 
 .banner1 {
-	background: url("<%= asset_path('banner1.jpg') %>");
+	background: url("<%= asset_path('slider_bg1.png') %>");
 }
 
 .banner2 {
@@ -80,13 +77,16 @@
 .banner3 {
 	background: url("<%= asset_path('banner1.jpg') %>");
 }
-
+.banner1, .banner2, .banner3 {
+	background-position: center center;
+	background-size: cover;
+}
 /*#myCarousel {
 	height: 90vh;
 }*/
 
 .carousel-control {
-	
+	/*padding: 15vw;*/
 }
 
 .sliderArrow {
@@ -233,7 +233,7 @@
 	padding-bottom: 50px;
 	h2	{
 		margin: 40px auto;
-		margin-bottom: 10px;
+		margin-bottom: 0;
 		font-family: 'markdown';
 		color: var(--darkgreen);
 	}
@@ -245,7 +245,7 @@
 
 @media(min-width: 1200px) {
 	.specialsDiv {
-			height: 450px;
+			height: 420px;
 	}
 
 	#specials-carousel-inner {

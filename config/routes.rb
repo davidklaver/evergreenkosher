@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # get '/' => 'pages#index'
   get '/' => 'donation_items#index'
 
+  get '/about' => 'pages#about'
   get 'orders' => 'orders#index'
   get '/orders/new' => 'orders#new'
   get 'orders/cancel_recurring_charge_form' => 'orders#cancel_recurring_charge_form'

@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- <link href="https://www.fontify.me/wf/685b24b51db351ff8a25613a79596f5b" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -19,7 +19,7 @@
       .navbar {
         padding: 50px 0 100px 0 !important;
         background: rgb(0,0,0);
-        background: linear-gradient(180deg, rgba(0,0,0,0.8169642857142857) 0%, rgba(0,0,0,0.723686974789916) 33%, rgba(0,0,0,0.48881302521008403) 60%, rgba(0,0,0,0) 100%);
+        background: linear-gradient(180deg, rgba(0,0,0,0.5169642857142857) 0%, rgba(0,0,0,0.723686974789916) 33%, rgba(0,0,0,0.28881302521008403) 60%, rgba(0,0,0,0) 100%);
       }
 
       .on {
@@ -91,17 +91,16 @@
           <li>Fri: 6:30am - 1&#189; hour before zman</li>
           <li>Motzei Shabbos: 1&#189; hour after zman - 1am</li>
           <br>
-          <li>
-            Town Square Mall, 59 NY-59
-            <br>
-            Monsey, NY 10952
-          </li>
+          <li>59 NY-59</li>
+          <li>Monsey, NY 10952</li>
+          <!-- <br> -->
+          <li><%= image_tag "town_square_logo.png", :class => "townSquareLogo" %> Located in Town Square</li>
         </ul>
       </div>
     </div>
     <div class="col-md-3">
-      <ul class="sitemapList">
-        <li>About Us</li>
+      <ul id="sitemapList">
+        <li><%= link_to "About Us", "/about" %></li>
         <li><%= link_to "Order Online", "https://www.shopevergreenkosher.com/" %></li>
         <li>Recipes (Coming soon!)</li>
         <li><%= link_to "Specials", "/specials" %></li>
@@ -110,7 +109,7 @@
         
       </ul>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 appLinkDiv">
       <ul>
         <li>
             <%= link_to image_tag("app_store.png"), "https://itunes.apple.com/us/app/evergreen-kosher-market/id1159477611?mt=8&ign-mpt=uo%3D4", :class => "appLink", target: :_blank  %>
