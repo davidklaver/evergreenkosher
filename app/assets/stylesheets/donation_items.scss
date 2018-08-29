@@ -201,7 +201,7 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	align-items: stretch;
+	/*align-items: stretch;*/
 	/*background: green;*/
 	margin: 0;
 	padding: 0;
@@ -226,6 +226,7 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 	}
 	label {
 		display: inline-block;
+		margin-left: 18px;
 	}
 }
 
@@ -236,32 +237,49 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 
 .donationItemImageDiv {
 	height: 140px;
-	width: 180px;
+	width: 140px;
 	/*display: inline;*/
 	float: left;
 	position: relative;
 	border-radius: 15px;
+	text-align: center;
 }
 
 .donationItemImage {
 	max-height: 100%;
 	max-width: 100%;
-	object-fit: contain;
-	background-color: white;
-	mix-blend-mode: multiply;
+	/*object-fit: contain;*/
+	/*display: inline-block;*/
+	/*text-align: center;*/
+	/*background-color: white;
+	mix-blend-mode: multiply;*/
 	/*float: left;*/
 	/*margin: 10px auto;*/
 	
 }
 
 .donationItemText {
+	width: 280px;
 	height: 100px;
 	color: var(--darkgreen);
-	font-size: 14px;
+	font-size: 16px;
 	text-align: right;
+	.name, .price {
+		font-weight: bold;	
+	}
+	.description {
+		color: #999;
+		font-size: 12px;
+	}
+	.price {
+		display: inline-block;
+		margin-top: 5px;
+		font-size: 14px;
+	}
 }
 
 .quantityField {
+	margin-top: 30px;
 	width: 40px;
 	text-align: right;
 	border-radius: 5px;
@@ -271,7 +289,7 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 .addToCartBtn {
 	width: 100%;
 	/*margin: 10px 0 0 30%;*/
-	margin-top: 30px;
+	margin-top: 20px;
 	background-color: var(--lightgreen);
 	/*background-color: #d81;*/
 	color: white !important;

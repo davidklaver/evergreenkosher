@@ -22,11 +22,11 @@
                 <%= image_tag "donation_item_images/#{donation_item.image_url}", :class => "donationItemImage" %>
               </div>
               <div class="donationItemText">
-                <%= donation_item.name %>
+                <span class="name"><%= donation_item.name %></span>
                 </br>
-                <%= donation_item.description %>
+                <span class="description"><%= donation_item.description %></span>
                 </br>
-                $<%= donation_item.price %>
+                <span class="price">$<%= donation_item.price %></span>
               </div>
               <%= form_tag "/carted_donation_items", method: :post do %>
                 <p>
