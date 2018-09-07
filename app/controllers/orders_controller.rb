@@ -91,7 +91,7 @@ class OrdersController < ApplicationController
           params = {
             xAmount: donation.total.to_f,
             xToken: donation.token,
-            xKey: ENV[CARDKNOX_API_KEY],
+            xKey: ENV['CARDKNOX_API_KEY'],
             xCommand: "cc:sale",
             xVersion: "4.5.5",
             xSoftwareName: "Evergreen",
