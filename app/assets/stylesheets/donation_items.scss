@@ -37,7 +37,7 @@
 	/*background: image-url('donationBanner.png');*/
 	background-color: #eee;
 	/*background: rgb(238,238,238);*/
-background: linear-gradient(270deg, rgba(200,200,200,1) 0%, rgba(228,228,228,1) 70%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%);
+background: linear-gradient(220deg, rgba(200,200,200,1) 0%, rgba(228,228,228,1) 30%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%);
 	/*border-bottom: 2px solid #eee;*/
 	/*box-shadow: inset -5px -5px 5px #ccc, inset 5px 5px 5px #ccc;*/
 	/*background: image-url('donationBox.png');*/
@@ -124,26 +124,44 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 .donationItemsContainer {
 	width: 100vw;
 	margin: 0;
+	.row {
+		/*border: 1px solid lightgray;*/
+		/*background-color: var(--lightgreen);*/
+		width: 80vw;
+		margin: 0 0 50px 10vw;
+	}
+	.col-md-3 {
+		background-color: var(--darkgreen);
+		border-radius: 5px;
+	}
 	h1 {
-		text-align: center;
+		text-align: justify;
 		font-size: 48px;
-		color: var(--darkgreen);
-		font-family: 'Montserrat';
+		line-height: 1.25;
 		font-style: italic;
-		padding: 20px 5vw;
+		/*padding: 30px 10px;*/
+		width: 80vw;
+		margin-left: 10vw;
 
 		span {
-			font-weight: bold;
+			/*font-weight: bold;*/
+			padding: 5px 10px;
+			border-radius: 5px;
+			/*background-color: var(--darkgreen);*/
+		color: var(--darkgreen);
+		/*color: white;*/
+		font-family: 'markdown';
 		}
-		/*a {
-			color: var(--darkgreen);
-			text-decoration: underline;
-		}*/
+	}
+	h2 {
+		margin-top: 0;
+		font-family: 'Montserrat';
+		font-size: 36px;
 	}
 	.monthlyP {
 			text-align: center;
-			font-size: 28px;
-			margin: 10px 25vw;
+			font-size: 24px;
+			margin: 10px;
 		}
 	@media(max-width: 768px) {
 		.monthlyP {
@@ -154,7 +172,7 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 
 	.cancelFormLink {
 	text-decoration: underline;
-	/*margin-top: -20px;*/
+	margin-top: 0;
 	text-align: center;
 	font-size: 16px;
 	a {
@@ -170,8 +188,12 @@ background: linear-gradient(90deg, rgba(255,255,255,0.8169642857142857) 0%, rgba
 @media(max-width: 768px) {
 	.donationItemsContainer {
 		h1 {
-			padding: 20px;
-			text-align: justify;
+			/*padding: 20px;*/
+			/*width: 98vw;*/
+			font-style: normal;
+			margin: 20px auto;
+			padding-left: 0;
+			/*text-align: justify;*/
 			font-size: 24px;
 		}
 		.cancelFormLink {
