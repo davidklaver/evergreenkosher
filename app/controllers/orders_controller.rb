@@ -102,6 +102,8 @@ class OrdersController < ApplicationController
           p params
           p "*" * 50
           x = Net::HTTP.post_form(url, params)
+          p "here's x:"
+          p x
         end
        
       end #end if
