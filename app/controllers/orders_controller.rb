@@ -42,7 +42,9 @@ class OrdersController < ApplicationController
     end
 
     order1 = Order.create(total: params[:xAmount], ref_num: params[:xRefNum], email: params[:xEmail], token: params[:xToken], recurring: is_recurring)
-
+    p "*" * 50 
+    p order1
+    p "*" * 50
     @carted_donation_items.each do |carted_donation_item|
       carted_donation_item.update(status: "purchased", order_id: order1.id)
     end
