@@ -1,5 +1,4 @@
 DonationItem.create!([
-  {name: "Size Milk", price: "3.19", image_url: "Golden Flow MILK.jpg", description: "Golden Flow (1/2 Gallon)"},
   {name: "Orange Juice", price: "3.49", image_url: "Lakewood ORANGE JUICE.jpg", description: "Lakewood Container"},
   {name: "Yogurt ", price: "0.79", image_url: "Norman Taste YOGURT S.jpg", description: "Norman's Taste (non fat)"},
   {name: "Individual Cakes ", price: "5.49", image_url: "Reismans CHOCOLATE DANISH.png", description: "Reisman's Chocolate Danish"},
@@ -34,13 +33,11 @@ DonationItem.create!([
   {name: "Snack Bags ", price: "0.25", image_url: "Liebers POTATO CHIPS.jpg", description: "Leiber's Potato Chips (.8 oz.)"},
   {name: "Snack Bags ", price: "0.25", image_url: "Liebers PRETZELS.png", description: "Leiber's Pretzels (.8 oz.)"},
   {name: "Snack Bags ", price: "0.39", image_url: "Sunrise POPCORN.png", description: "Sunrise Popcorn (.8 oz.)"},
-  {name: "Melba Toast Crackers", price: "4.19", image_url: "Melba Toast Crackers", description: "Paskez (7 oz.)"},
   {name: "Oatmeal Packets", price: "3.09", image_url: "Paskesz MELBA TOAST.jpg", description: "Village Farm Instant Oatmeal (10 Pack)"},
   {name: "Nuts", price: "4.09", image_url: "Kleins FRUIT NUTS.png", description: "Klein's Fruit and Nuts (51 oz.)"},
   {name: "Fresh Fruit", price: "6.95", image_url: "FRESH FRUITS.jpg", description: nil},
   {name: "Fresh Vegetables", price: "5.95", image_url: "FRESH VEGETABLES.jpg", description: nil},
-  {name: "Bodek", price: "4.89", image_url: "Bodek LETTUCE.JPG", description: "Lettuce"}
-])
-Order.create!([
-  {ref_num: nil, email: nil, total: nil}
+  {name: "Bodek", price: "4.89", image_url: "Bodek LETTUCE.JPG", description: "Lettuce"},
+  {name: "Melba Toast Crackers", price: "4.19", image_url: "Paskesz MELBA TOAST.jpg", description: "Paskez (7 oz.)"},
+  {name: "Milk", price: "3.19", image_url: "Golden Flow MILK.jpg", description: "Golden Flow (1/2 Gallon)"}
 ])

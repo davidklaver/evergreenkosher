@@ -17,19 +17,21 @@ class OrdersController < ApplicationController
     session[:cart].each do |carted_donation_item_id|
       @carted_donation_items << CartedDonationItem.find_by("status = ? and id = ?", "carted", carted_donation_item_id)
     end
-
     @carted_donation_items.each do |item|
       @description << item.quantity.to_s + " " + item.donation_item.name
       @total += item.price * item.quantity
     end  
-  
     @invoiceNumber = Order.last.id + 238
-
   end
 
   def create
+
     session[:cart] = []
     carted_donation_item_ids = eval(params[:xCustom02])
+    p "*" * 50 
+    p "Here is carted_donation_item_ids:"
+    p carted_donation_item_ids
+    p "*" * 50
     @carted_donation_items = []
     carted_donation_item_ids.each do |carted_donation_item_id|
       @carted_donation_items << CartedDonationItem.find_by("status = ? and id = ?", "carted", carted_donation_item_id)
